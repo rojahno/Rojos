@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Hourglass } from "../Loaders.tsx/Hourglass";
 import { OverflowContainer } from "./OverflowContainer";
 
 /**
@@ -17,6 +18,7 @@ const Box = styled.div`
 
 export function LayoutExample() {
   return (
+    <div>
     <Box>
       <OverflowContainer>
         Lorem1 ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugiat cumque expedita ipsum soluta doloribus id, atque similique consectetur reprehenderit aut obcaecati animi nobis ipsam
@@ -27,5 +29,9 @@ export function LayoutExample() {
         <button>hello</button>
       </OverflowContainer>
     </Box>
+
+    <Hourglass/>
+      
+    </div>
   );
 }

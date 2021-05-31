@@ -7,19 +7,6 @@ interface ScrollableContainerProps {
   children: any;
 }
 
-interface ContentProps {
-  padding?: string;
-  margin?: string;
-}
-/**
-   * 
-   
-  const Container = styled.div`
-    display: flex;
-    justify-content: center;
-  `;
-  */
-
 /**
  * @description A scrollable container which centers the elements horizontaly and handles overflow.
  * Can be used if the container only has a set amount of space to work in.
