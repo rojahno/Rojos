@@ -1,4 +1,3 @@
-import './App.css';
 import { LayoutExample } from './components/layout/LayoutExample';
 
 function App() {
