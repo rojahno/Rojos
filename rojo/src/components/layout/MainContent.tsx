@@ -5,12 +5,13 @@ interface ContentProps {
   horizontalCenter?: boolean;
   height?: string;
   padding?: string;
+  color?: string;
 }
 
 export const MainContent = styled.div<ContentProps>`
   grid-row-start: main-content;
   grid-row-end: footer;
-  background-color: #4977da;
+  background-color: ${(props) => (props.color ? props.color : "")};
   display: flex;
   justify-content: ${(props) => (props.horizontalCenter ? "center" : "")};
   align-items: ${(props) => (props.verticalCenter ? "center" : "")};

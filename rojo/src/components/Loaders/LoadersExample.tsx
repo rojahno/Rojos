@@ -1,8 +1,8 @@
 import React from "react";
 
 import styled from "styled-components";
-import CircularLoader from "../Loaders.tsx/CircularLoader";
-import { Hourglass } from "../Loaders.tsx/Hourglass";
+import CircularLoader from "./CircularLoader";
+import { Hourglass } from "./Hourglass";
 
 /**
  * @summary An example of how to apply the different layout in this library.

@@ -1,9 +1,9 @@
-import { LayoutExample } from "./components/layout/LayoutExample";
+import { StartPage } from "./components/displayPage/StartPage";
 
 function App() {
   return (
     <div className="App">
-      <LayoutExample />
+      <StartPage />
     </div>
   );
 }
