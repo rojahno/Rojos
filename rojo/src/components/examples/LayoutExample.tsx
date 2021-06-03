@@ -6,6 +6,7 @@ import { Grid } from "../layout/Grid";
 import { Hourglass } from "../Loaders/Hourglass";
 import { Box } from "../layout/Box";
 import CircularLoader from "../Loaders/CircularLoader";
+import { SideBar } from "../sideBar/SideBar"
 
 /**
  * @summary An example of how to apply the different layout in this library.
@@ -36,6 +37,9 @@ export function LayoutExample() {
           </Box>
           <Box>
             <CircularLoader />
+          </Box>
+          <Box>
+            <SideBar />
           </Box>
         </Grid>
       </MainContent>
