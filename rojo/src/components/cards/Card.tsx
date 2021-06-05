@@ -12,7 +12,8 @@ const CardTitle = styled.h4`
   justify-content: center;
   border-bottom: 1px solid #3c3c3c80;
   border-radius: 0.1rem;
-  padding: 2px 0px;
+  padding: 5px 0px;
+  margin: 0;
 `;
 
 const CardContent = styled.div`

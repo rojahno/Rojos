@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-interface SideBarProps {}
+//interface SideBarProps {}
 
 const SideBarContent = styled.div`
   grid-column-start: sidebar;

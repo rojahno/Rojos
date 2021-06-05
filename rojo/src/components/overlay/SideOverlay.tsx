@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { StyledButton } from "./../general/Buttons";
 
 interface SideNavProps {
   width?: string;
@@ -53,22 +54,6 @@ const SideLinks = styled.a`
 
   &:hover {
     color: #f1f1f1;
-  }
-`;
-
-const StyledButton = styled.button`
-  background-color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 10px;
-  border: none;
-  appearance: none;
-  font-size: 1rem;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(111, 117, 133, 0.14);
-  transition: transform ease-in 0.1s;
-
-  &:hover {
-    transform: scale(1.05);
   }
 `;
 

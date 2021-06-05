@@ -1,31 +1,26 @@
 import styled from "styled-components";
-import { Glow } from "./../animations";
 
-const NeonEffect = styled.h1`
-  -webkit-animation: ${Glow} 1s ease-in-out infinite alternate;
-  -moz-animation: ${Glow} 1s ease-in-out infinite alternate;
-  animation: ${Glow} 1s ease-in-out infinite alternate;
-  color: #fff;
-  font-family: cursive;
+export const StyledButton = styled.button`
+  background-color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  border: none;
+  appearance: none;
+  font-size: 1rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(111, 117, 133, 0.14);
+  transition: transform ease-in 0.1s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
-
-export const NeonText = styled.h1`
-  font-size: 4rem;
-  display: inline-block;
-
-  cursor: default;
-  text-decoration: none;
-  color: #ff3333aa;
-  padding: 0.25em 1em;
-  border-radius: 0.25em;
-
-  text-shadow: 0 0 0.125em #ff3333aa, 0 0 0.45em; //Remove?
-  box-shadow: inset 0 0 0.5em 0 hsl(0, 100%, 60%), 0 0 0.5em 0 hsl(0, 100%, 60%);
-
-  position: relative;
-`;
-
-export const NeonButton = styled.button`
+interface NeonButtonProp {
+  color?: string;
+  bgColor?: string;
+  reflection?: boolean;
+}
+export const NeonButton = styled.button<NeonButtonProp>`
   font-size: 4rem;
 
   display: inline-block;
@@ -42,7 +37,6 @@ export const NeonButton = styled.button`
   box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 0 0 0.5em 0 hsl(317 100% 54%);
 
   position: relative;
-  //animation: ${Glow} 1s ease-in-out infinite alternate;
 
   &::before {
     pointer-events: none;

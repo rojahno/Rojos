@@ -11,11 +11,15 @@ const ShowCaseContainer = styled.div`
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
+  justify-content: flex-start;
   align-items: center;
   margin: 0px;
   padding: 0em 2em 2em 2em;
   margin: 0.5em;
+`;
+
+const ShowCaseTitle = styled.h1`
+  align-self: flex-start;
 `;
 
 const Image = styled.img`
@@ -26,7 +30,7 @@ const Image = styled.img`
 export const ShowCase = (props: ShowCaseProps) => {
   return (
     <ShowCaseContainer>
-      <h1>Layout</h1>
+      <ShowCaseTitle> {props.title}</ShowCaseTitle>
       <Grid>{props.children}</Grid>
     </ShowCaseContainer>
   );

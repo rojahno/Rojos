@@ -1,4 +1,5 @@
 import { StartPage } from "./components/displayPage/StartPage";
+import './App.css';
 
 function App() {
   return (
