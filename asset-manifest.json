@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/Rojos/static/css/main.c4d1f811.chunk.css",
+    "main.js": "/Rojos/static/js/main.aaffd256.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.aaffd256.chunk.js.map",
+    "runtime-main.js": "/Rojos/static/js/runtime-main.bb93cb11.js",
+    "runtime-main.js.map": "/Rojos/static/js/runtime-main.bb93cb11.js.map",
+    "static/js/2.dedf4606.chunk.js": "/Rojos/static/js/2.dedf4606.chunk.js",
+    "static/js/2.dedf4606.chunk.js.map": "/Rojos/static/js/2.dedf4606.chunk.js.map",
+    "static/js/3.ae4e6bb6.chunk.js": "/Rojos/static/js/3.ae4e6bb6.chunk.js",
+    "static/js/3.ae4e6bb6.chunk.js.map": "/Rojos/static/js/3.ae4e6bb6.chunk.js.map",
+    "index.html": "/Rojos/index.html",
+    "static/css/main.c4d1f811.chunk.css.map": "/Rojos/static/css/main.c4d1f811.chunk.css.map",
+    "static/js/2.dedf4606.chunk.js.LICENSE.txt": "/Rojos/static/js/2.dedf4606.chunk.js.LICENSE.txt",
+    "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
+    "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
+    "static/media/hourglass.8f57b54c.svg": "/Rojos/static/media/hourglass.8f57b54c.svg",
+    "static/media/layout.472e7541.svg": "/Rojos/static/media/layout.472e7541.svg",
+    "static/media/loading-bar.31b26263.svg": "/Rojos/static/media/loading-bar.31b26263.svg",
+    "static/media/loading-circle.ca0bcd65.svg": "/Rojos/static/media/loading-circle.ca0bcd65.svg",
+    "static/media/overflow-text.3022eea5.svg": "/Rojos/static/media/overflow-text.3022eea5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb93cb11.js",
+    "static/js/2.dedf4606.chunk.js",
+    "static/css/main.c4d1f811.chunk.css",
+    "static/js/main.aaffd256.chunk.js"
+  ]
+}
