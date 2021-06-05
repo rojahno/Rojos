@@ -12,6 +12,6 @@ export const Layout = styled.section<LayoutProps>`
   width: 100%;
   height: ${(props) => (props.height ? props.height : "100%")};
   display: grid;
-  grid-gap: 1em; //Remove the gap or make it an prop?
+  grid-gap: 0em; //Remove the gap or make it an prop?
   grid-template-rows: [header] auto [main-content] 1fr [footer] auto;
 `;

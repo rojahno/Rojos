@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface ContentProps {
-  verticalCenter?: boolean;
-  horizontalCenter?: boolean;
+  centerY?: boolean;
+  centerX?: boolean;
   height?: string;
   padding?: string;
   color?: string;
@@ -11,10 +11,11 @@ interface ContentProps {
 export const MainContent = styled.div<ContentProps>`
   grid-row-start: main-content;
   grid-row-end: footer;
-  background-color: ${(props) => (props.color ? props.color : "")};
+  background-color: ${(props) => (props.color ? props.color : "#fff")};
   display: flex;
-  justify-content: ${(props) => (props.horizontalCenter ? "center" : "")};
-  align-items: ${(props) => (props.verticalCenter ? "center" : "")};
+  flex-direction: column;
+  justify-content: ${(props) => (props.centerY ? "center" : "")};
+  align-items: ${(props) => (props.centerX ? "center" : "")};
   height: ${(props) => (props.height ? props.height : "")};
-  padding: ${(props) => (props.padding ? props.padding : "1em")};
+  padding: ${(props) => (props.padding ? props.padding : "oem")};
 `;

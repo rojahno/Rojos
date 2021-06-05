@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Footer = styled.div<FooterProps>`
   grid-row-start: footer;
-  background-color: ${(props) => (props.color ? props.color : "")};
+  background-color: ${(props) => (props.color ? props.color : "#fff")};
   display: flex;
   justify-content: ${(props) => (props.centered ? "center" : "")};
   align-items: ${(props) => (props.centered ? "center" : "")};
-  height: ${(props) => (props.height ? props.height : "4em")};
-  padding: ${(props) => (props.padding ? props.padding : "1em")};
+  height: ${(props) => (props.height ? props.height : "100%")};
+  padding: ${(props) => (props.padding ? props.padding : "0em")};
   margin: ${(props) => (props.padding ? props.padding : "0em")};
 `;
 

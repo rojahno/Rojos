@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Header = styled.header<HeaderProps>`
   grid-row-start: header;
-  background-color: ${(props) => (props.color ? props.color : "")};
+  background-color: ${(props) => (props.color ? props.color : "#fff")};
   display: flex;
   justify-content: ${(props) => (props.centered ? "center" : "")};
   align-items: ${(props) => (props.centered ? "center" : "")};
-  height: ${(props) => (props.height ? props.height : "4em")};
-  padding: ${(props) => (props.padding ? props.padding : "1em")};
+  height: ${(props) => (props.height ? props.height : "100%")};
+  padding: ${(props) => (props.padding ? props.padding : "0em")};
   position: ${(props) => (props.fixed ? "fixed" : "")};
   z-index: ${(props) => (props.fixed ? "fixed" : "")};
   width: ${(props) => (props.fixed ? "fixed" : "")};
