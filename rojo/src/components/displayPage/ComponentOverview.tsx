@@ -4,10 +4,10 @@ import { Content } from "../layout/Content";
 
 export const ComponentOverview = () => {
   return (
-    <Content>
+    <div>
       <h1>Components</h1>
       <LayoutShowCase />
       <LoaderShowCase />
-    </Content>
+    </div>
   );
 };

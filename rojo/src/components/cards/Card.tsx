@@ -24,7 +24,7 @@ const CardContent = styled.div`
 `;
 
 
-const CardContainer = styled.div`
+const CardContainer = styled.div<CardProps>`
   box-shadow: 0;
   transition: 0.3s;
   border: 1px solid #3c3c3c80;
@@ -32,13 +32,13 @@ const CardContainer = styled.div`
   width: 100%;
 
   &:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow:${(props) => (props.hoverable ? '0px 8px 16px 0px rgba(0, 0, 0, 0.2)' : "")};
   }
 `;
 
 export const Card = (props: CardProps) => {
   return (
-    <CardContainer>
+    <CardContainer hoverable={props.hoverable}>
       <CardTitle>{props.title}</CardTitle>
       <CardContent>{props.children}</CardContent>
     </CardContainer>

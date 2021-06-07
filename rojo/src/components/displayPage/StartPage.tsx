@@ -3,9 +3,10 @@ import { Header } from "../layout/Header";
 import { Layout } from "../layout/Layout";
 import { MainContent } from "../layout/MainContent";
 import { NeonText } from "../neon/Neon";
-import { Route, HashRouter as Router, Switch, Link } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
+import { Content } from "../layout/Content";
 
 export function StartPage() {
   return (
@@ -14,15 +15,17 @@ export function StartPage() {
         <NeonText>Rojo</NeonText>
       </Header>
       <MainContent centerX={true}>
-        <Router>
-          <Switch>
-            <Route path="/" exact component={ComponentOverview}></Route>
-            <Route path="/layout" exact component={LayoutExample}></Route>
-            <Route path="/grid" exact component={GridExample}></Route>
-            <Route path="/overflow" exact component={GridExample}></Route>
-            <Route path="/divider" exact component={GridExample}></Route>
-          </Switch>
-        </Router>
+        <Content>
+          <Router>
+            <Switch>
+              <Route path="/" exact component={ComponentOverview}></Route>
+              <Route path="/layout" exact component={LayoutExample}></Route>
+              <Route path="/grid" exact component={GridExample}></Route>
+              <Route path="/overflow" exact component={GridExample}></Route>
+              <Route path="/divider" exact component={GridExample}></Route>
+            </Switch>
+          </Router>
+        </Content>
       </MainContent>
       <Footer centered={true}>Dunde AS</Footer>
     </Layout>

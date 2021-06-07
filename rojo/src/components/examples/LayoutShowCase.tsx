@@ -16,33 +16,32 @@ const Image = styled.img`
 export const LayoutShowCase = () => {
   return (
     <div>
-      <Divider />
+
       <ShowCase title={"Layouts"}>
         <Link to={"/layout"}>
-          <Card title={"Layout"}>
+          <Card hoverable={true} title={"Layout"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>
 
         <Link to={"/grid"}>
-          <Card title={"Grid"}>
+          <Card hoverable={true} title={"Grid"}>
             <Image src={SVGGrid} />
           </Card>
         </Link>
 
         <Link to={"/overflow"}>
-          <Card title={"Overflow"}>
+          <Card hoverable={true} title={"Overflow"}>
             <Image src={SVGOverflow} />
           </Card>
         </Link>
 
         <Link to={"/divider"}>
-          <Card title={"Divider"}>
+          <Card hoverable={true} title={"Divider"}>
             <Image src={SVGDivider} />
           </Card>
         </Link>
       </ShowCase>
-      <Divider />
     </div>
   );
 };
