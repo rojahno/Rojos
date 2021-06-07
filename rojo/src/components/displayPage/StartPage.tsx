@@ -3,7 +3,7 @@ import { Header } from "../layout/Header";
 import { Layout } from "../layout/Layout";
 import { MainContent } from "../layout/MainContent";
 import { NeonText } from "../neon/Neon";
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { Route, HashRouter as Router, Switch, Link } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
 
