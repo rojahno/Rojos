@@ -9,6 +9,18 @@ to{
 }
 `;
 
+export const Spin = keyframes`
+from {
+
+        transform: rotate(0deg);
+}
+to{
+
+        transform: rotate(360deg);
+    }
+}
+`;
+
 export const moveInLeft = keyframes`
 ${"70%"} {
     opacity: 0;

@@ -4,7 +4,9 @@ import { ShowCase } from "../layout/ShowCase";
 import SVGLoadingBar from "../../images/loading-bar.svg";
 import SVGLoadingCircle from "../../images/loading-circle.svg";
 import SVGHourGlass from "./../../images/hourglass.svg";
-import { Divider } from "./../layout/Divider";
+import { Divider } from "../layout/Divider";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Image = styled.img`
   height: auto;
@@ -15,12 +17,18 @@ export const LoaderShowCase = () => {
   return (
     <div>
       <ShowCase title={"Loaders"}>
-        <Card title={"Circle"}>
-          <Image src={SVGLoadingCircle} />
-        </Card>
-        <Card title={"Icon"}>
-          <Image src={SVGHourGlass} />
-        </Card>
+        <Link to={"/loaders/circle"}>
+          <Card title={"Circle"}>
+            <Image src={SVGLoadingCircle} />
+          </Card>
+        </Link>
+
+        <Link to={"/loaders/icon"}>
+          <Card title={"Icon"}>
+            <Image src={SVGHourGlass} />
+          </Card>
+        </Link>
+
         <Card title={"Loading bar"}>
           <Image src={SVGLoadingBar} />
         </Card>

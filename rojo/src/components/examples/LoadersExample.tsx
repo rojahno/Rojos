@@ -1,6 +1,6 @@
 import { Box } from "../layout/Box";
 import { Grid } from "../layout/Grid";
-import CircularLoader from "../Loaders/CircularLoader";
+import CircularLoader from "../Loaders/circles/CircularLoader";
 import { Hourglass } from "../Loaders/Hourglass";
 import { ExampleContainer } from "./ExampleContainer";
 

@@ -1,5 +1,5 @@
-import { LayoutShowCase } from "../examples/LayoutShowCase";
-import { LoaderShowCase } from "../examples/LoaderShowCase";
+import { LayoutShowCase } from "../showcase/LayoutShowCase";
+import { LoaderShowCase } from "../showcase/LoaderShowCase";
 
 export const ComponentOverview = () => {
   return (

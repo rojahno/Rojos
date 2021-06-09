@@ -6,25 +6,29 @@ import { NeonText } from "../neon/Neon";
 import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
+import { CircleLoaderExample } from "../examples/CircleLoaderExample";
 
 export function StartPage() {
   return (
     <Layout height={"100vh"}>
-      <Header color={"hsl(323 21% 16%)"} centered={true}>
+      <Header color={"#31202b"} centered={true}>
         <NeonText>Rojo</NeonText>
       </Header>
       <MainContent centerX={true}>
-        
-          <Router>
-            <Switch>
-              <Route path="/" exact component={ComponentOverview}></Route>
-              <Route path="/layout" exact component={LayoutExample}></Route>
-              <Route path="/grid" exact component={GridExample}></Route>
-              <Route path="/overflow" exact component={GridExample}></Route>
-              <Route path="/divider" exact component={GridExample}></Route>
-            </Switch>
-          </Router>
-  
+        <Router>
+          <Switch>
+            <Route path="/" exact component={ComponentOverview}></Route>
+            <Route path="/layout" exact component={LayoutExample}></Route>
+            <Route path="/grid" exact component={GridExample}></Route>
+            <Route path="/overflow" exact component={GridExample}></Route>
+            <Route path="/divider" exact component={GridExample}></Route>
+            <Route
+              path="/loaders/circle"
+              exact
+              component={CircleLoaderExample}
+            ></Route>
+          </Switch>
+        </Router>
       </MainContent>
       <Footer centered={true}>Dunde AS</Footer>
     </Layout>

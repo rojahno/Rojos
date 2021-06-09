@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Rotate, Dash } from "../animations";
+import { Rotate, Dash } from "../../animations";
 
 interface SpinnerProps {
   color?: string;
