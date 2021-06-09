@@ -6,7 +6,6 @@ import { NeonText } from "../neon/Neon";
 import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
-import { Content } from "../layout/Content";
 
 export function StartPage() {
   return (
@@ -15,7 +14,7 @@ export function StartPage() {
         <NeonText>Rojo</NeonText>
       </Header>
       <MainContent centerX={true}>
-        <Content>
+        
           <Router>
             <Switch>
               <Route path="/" exact component={ComponentOverview}></Route>
@@ -25,7 +24,7 @@ export function StartPage() {
               <Route path="/divider" exact component={GridExample}></Route>
             </Switch>
           </Router>
-        </Content>
+  
       </MainContent>
       <Footer centered={true}>Dunde AS</Footer>
     </Layout>

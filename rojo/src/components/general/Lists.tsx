@@ -9,6 +9,6 @@ const Ul = styled.ul`
   list-style-type: circle;
 `;
 export const BulletPointList = (props:BulletPointListProps) => {
-  return <Ul>{props.listItems?.map((item) => <li>{item}</li>)
+  return <Ul>{props.listItems?.map((item, index) => <li key={index}>{item}</li>)
       }</Ul>;
 };

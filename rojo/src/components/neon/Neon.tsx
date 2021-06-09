@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { Glow } from "./../animations";
 
-const NeonEffect = styled.h1`
-  -webkit-animation: ${Glow} 1s ease-in-out infinite alternate;
-  -moz-animation: ${Glow} 1s ease-in-out infinite alternate;
-  animation: ${Glow} 1s ease-in-out infinite alternate;
-  color: #fff;
-  font-family: cursive;
-`;
+// const NeonEffect = styled.h1`
+//   -webkit-animation: ${Glow} 1s ease-in-out infinite alternate;
+//   -moz-animation: ${Glow} 1s ease-in-out infinite alternate;
+//   animation: ${Glow} 1s ease-in-out infinite alternate;
+//   color: #fff;
+//   font-family: cursive;
+// `;
 
 export const NeonText = styled.h1`
   font-size: 4rem;

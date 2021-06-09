@@ -5,7 +5,6 @@ import SVGLayout from "../../images/layout.svg";
 import SVGGrid from "../../images/grid.svg";
 import SVGOverflow from "./../../images/overflow-text.svg";
 import SVGDivider from "./../../images/divider.svg";
-import { Divider } from "./../layout/Divider";
 import { Link } from "react-router-dom";
 
 const Image = styled.img`
