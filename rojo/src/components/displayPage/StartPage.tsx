@@ -7,6 +7,7 @@ import { Route, HashRouter as Router, Switch } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
 import { CircleLoaderExample } from "../examples/CircleLoaderExample";
+import { AccordionExample } from "../examples/AccordionExample";
 
 export function StartPage() {
   return (
@@ -22,6 +23,7 @@ export function StartPage() {
             <Route path="/grid" exact component={GridExample}></Route>
             <Route path="/overflow" exact component={GridExample}></Route>
             <Route path="/divider" exact component={GridExample}></Route>
+            <Route path="/accordion" exact component={AccordionExample}></Route>
             <Route
               path="/loaders/circle"
               exact

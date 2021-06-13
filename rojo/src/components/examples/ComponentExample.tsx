@@ -10,8 +10,7 @@ interface ComponentExampleProps {
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding-top:2em;
-
+  margin-top:2em;
  `; 
 export const ComponentExample = (props: ComponentExampleProps) => {
   return (
