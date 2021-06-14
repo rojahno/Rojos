@@ -20,7 +20,7 @@ export const AccordionExample = () => {
       <StyledDiv>
         <ComponentExample title={"Example"}>
           <Rounded>
-            <Panel header={"Dette er en header"}>
+            <Panel expanded={true} header={"Dette er en header"}>
                 <p>Dette er contenten</p>
             </Panel>
             <Panel header={"Dette er en header"}>

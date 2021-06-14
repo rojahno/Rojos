@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Arrow } from "../icon/Arrow";
 
@@ -54,8 +54,16 @@ export const Panel = (props: PanelProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    if (!props.expanded) {
+      setIsActive(!isActive);
+    }
   };
+
+  useEffect(() => {
+    if(props.expanded)
+    setIsActive(true);
+
+  });
 
   // if (props.expanded || isActive) {
   return (
@@ -67,15 +75,4 @@ export const Panel = (props: PanelProps) => {
       <Content hidden={!isActive}>{props.children}</Content>
     </CollabsibleItem>
   );
-  /** } else {
-    return (
-      <CollabsibleItem>
-        <PanelHeader onClick={handleClick}>
-          {props.header}
-          <Arrow rotate={true} />
-        </PanelHeader>
-      </CollabsibleItem>
-    );
-  }
-  **/
 };
