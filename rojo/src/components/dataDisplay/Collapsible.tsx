@@ -26,6 +26,7 @@ const CollabsibleItem = styled.div`
   justify-content: flex-start;
   background-color: #fff;
   margin-bottom: 1em;
+  border-radius: 5px;
 `;
 
 interface ContentProps {
@@ -33,14 +34,17 @@ interface ContentProps {
 }
 
 export const Content = styled.div<ContentProps>`
-  margin: 0;
   padding: 1em;
-  /**
-  visibility: ${(props) => (props.hide ? "hidden" : "")};
-  max-height: ${(props) => (props.hide ? "0px" : "100%")};
+  margin-top: 0;
+  margin-bottom: 0;
+  overflow: ${(props) => (props.hide ? "hidden" : "")};
+  height: ${(props) => (props.hide ? "0px" : "2rem")};
   padding: ${(props) => (props.hide ? "0em" : "1em")};
-  transition: visibility 1s ease-in;
-   */
+  transition: all 200ms ease-out;
+
+  &::after {
+    transition: transform 300ms ease-out;
+  }
 `;
 
 interface PanelProps {
@@ -60,9 +64,7 @@ export const Panel = (props: PanelProps) => {
   };
 
   useEffect(() => {
-    if(props.expanded)
-    setIsActive(true);
-
+    if (props.expanded) setIsActive(true);
   });
 
   // if (props.expanded || isActive) {
@@ -72,7 +74,9 @@ export const Panel = (props: PanelProps) => {
         {props.header}
         <Arrow rotate={!isActive} />
       </PanelHeader>
-      <Content hidden={!isActive}>{props.children}</Content>
+      <Content hide={!isActive} hidden={!isActive}>
+        {props.children}
+      </Content>
     </CollabsibleItem>
   );
 };

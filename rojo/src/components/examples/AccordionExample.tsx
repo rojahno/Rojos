@@ -26,6 +26,12 @@ export const AccordionExample = () => {
             <Panel header={"Dette er en header"}>
                 <p>Dette er contenten</p>
             </Panel>
+            <Panel header={"Dette er en header"}>
+                <p>Dette er contenten</p>
+            </Panel>
+            <Panel header={"Dette er en header"}>
+                <p>Dette er contenten</p>
+            </Panel>
           </Rounded>
         </ComponentExample>
       </StyledDiv>
