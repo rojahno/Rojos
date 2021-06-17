@@ -64,10 +64,14 @@ export const Panel = (props: PanelProps) => {
   };
 
   useEffect(() => {
-    if (props.expanded) setIsActive(true);
+    const setExpaned = () => {
+      if (props.expanded) {
+        setIsActive(true);
+      }
+    };
+    setExpaned();
   });
 
-  // if (props.expanded || isActive) {
   return (
     <CollabsibleItem>
       <PanelHeader onClick={handleClick}>

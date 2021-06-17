@@ -9,12 +9,12 @@ const Image = styled.img`
   width: 100%;
 `;
 
-export const CollapsibleShowCase = () => {
+export const ModalShowCase = () => {
   return (
     <div>
-      <ShowCase title={"Data Display"}>
-        <Link to={"/accordion"}>
-          <Card hoverable={true} title={"Collapsible"}>
+      <ShowCase title={"Notification"}>
+        <Link to={"/notification"}>
+          <Card hoverable={true} title={"Notification"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>

@@ -8,6 +8,7 @@ import { ComponentOverview } from "./ComponentOverview";
 import { GridExample, LayoutExample } from "../examples/LayoutExample";
 import { CircleLoaderExample } from "../examples/CircleLoaderExample";
 import { AccordionExample } from "../examples/AccordionExample";
+import { ModalExample } from "../examples/ModalExample";
 
 export function StartPage() {
   return (
@@ -24,6 +25,7 @@ export function StartPage() {
             <Route path="/overflow" exact component={GridExample}></Route>
             <Route path="/divider" exact component={GridExample}></Route>
             <Route path="/accordion" exact component={AccordionExample}></Route>
+            <Route path="/notification" exact component={ModalExample}></Route>
             <Route
               path="/loaders/circle"
               exact
