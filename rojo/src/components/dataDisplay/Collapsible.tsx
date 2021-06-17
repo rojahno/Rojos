@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Arrow } from "../icon/Arrow";
 
@@ -34,17 +34,34 @@ interface ContentProps {
 }
 
 export const Content = styled.div<ContentProps>`
-  padding: 1em;
-  margin-top: 0;
-  margin-bottom: 0;
-  overflow: ${(props) => (props.hide ? "hidden" : "")};
-  height: ${(props) => (props.hide ? "0px" : "2rem")};
-  padding: ${(props) => (props.hide ? "0em" : "1em")};
-  transition: all 200ms ease-out;
+  display: border-box;
+  position: relative;
+  max-height: ${(props) => (props.hide ? "0px" : "100px")};
+  height: auto;
+  //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
+  overflow: hidden;
+  transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* animation-name: grow-modal;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  transition: all 0.5s ease;
 
-  &::after {
-    transition: transform 300ms ease-out;
+  @keyframes grow-modal {
+    0% {
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+    }
+
+    50% {
+      height: 184px;
+    }
+    100% {
+      height: auto;
+      overflow: initial;
+    }
   }
+  */
 `;
 
 interface PanelProps {
@@ -56,6 +73,8 @@ interface PanelProps {
 
 export const Panel = (props: PanelProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [content, setContent] = useState();
+  const [height, setHeight] = useState();
 
   const handleClick = () => {
     if (!props.expanded) {
@@ -64,12 +83,16 @@ export const Panel = (props: PanelProps) => {
   };
 
   useEffect(() => {
+    const getHeight = () => {
+      console.log("height: " + height);
+    };
     const setExpaned = () => {
       if (props.expanded) {
         setIsActive(true);
       }
     };
     setExpaned();
+    getHeight();
   });
 
   return (
@@ -78,7 +101,10 @@ export const Panel = (props: PanelProps) => {
         {props.header}
         <Arrow rotate={!isActive} />
       </PanelHeader>
-      <Content hide={!isActive} hidden={!isActive}>
+      <Content
+        hide={!isActive}
+        //hidden={!isActive}
+      >
         {props.children}
       </Content>
     </CollabsibleItem>
