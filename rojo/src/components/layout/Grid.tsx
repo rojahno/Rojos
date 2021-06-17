@@ -10,11 +10,11 @@ interface GridProps {
 
 export const Grid = styled.div<GridProps>`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(${(props) => (props.columns ? props.columns : "auto-fill")}, minmax(100px, 1fr));
   width: 100%;
 
-  align-items: ${(props) => (props.centerY ? "center" : "baseline")};
-  justify-content: ${(props) => (props.centerX ? "center" : "baseline")};
+  align-items: ${(props) => (props.centerY ? "center" : "")};
+  justify-content: ${(props) => (props.centerX ? "center" : "")};
   grid-gap: 1em; //ADD PROPS
   max-width: ${(props) => (props.maxWidth ? props.maxWidth : "")};
   padding: 0em;

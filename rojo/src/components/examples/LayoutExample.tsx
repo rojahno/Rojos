@@ -5,6 +5,10 @@ import { Layout } from "../layout/Layout";
 import { Grid } from "../layout/Grid";
 import { Box } from "../layout/Box";
 import { ExampleContainer } from "./ExampleContainer";
+import { BulletPointList } from "../general/Lists";
+import { ComponentExample } from "./ComponentExample";
+import { Content } from "../layout/Content";
+import { SimpleContainer } from "../layout/SimpleContainer";
 
 /**
  * @summary An example of how to apply the different layout in this library.
@@ -13,21 +17,27 @@ import { ExampleContainer } from "./ExampleContainer";
  */
 
 export function LayoutExample() {
+  const list = ["This is good because...", "Layout is the parent component", "Header, Content and Footer are children components"];
+
   return (
-    <ExampleContainer>
-      <h1>Layout</h1>
-      <Layout height={"100%"}>
-        <Header centered={true} color={"#51C4C4"}>
-          Header
-        </Header>
-        <MainContent centerX={true} centerY={true} color={"#51c4c4ac"}>
-          Content
-        </MainContent>
-        <Footer centered={true} color={"#51C4C4"}>
-          Footer
-        </Footer>
-      </Layout>
-    </ExampleContainer>
+    <Content>
+      <ComponentExample title={"Example"}>
+        <BulletPointList listItems={list} />
+        <SimpleContainer>
+          <Layout>
+            <Header centered={true} color={"#51C4C4"}>
+              Header
+            </Header>
+            <MainContent centerX={true} centerY={true} color={"#51c4c4ac"}>
+              Content
+            </MainContent>
+            <Footer centered={true} color={"#51C4C4"}>
+              Footer
+            </Footer>
+          </Layout>
+        </SimpleContainer>
+      </ComponentExample>
+    </Content>
   );
 }
 

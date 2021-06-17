@@ -4,4 +4,7 @@ interface DividerProps {
   rounded?: boolean;
 }
 
-export const Divider = styled.hr<DividerProps>``;
+export const Divider = styled.hr<DividerProps>`
+
+  width: 100%;
+`;

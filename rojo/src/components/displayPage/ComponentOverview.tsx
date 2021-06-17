@@ -1,13 +1,16 @@
-import { LayoutShowCase } from "../examples/LayoutShowCase";
-import { LoaderShowCase } from "../examples/LoaderShowCase";
-import { Content } from "../layout/Content";
+import { CollapsibleShowCase } from "../showcase/CollapsibleShowCase";
+import { LayoutShowCase } from "../showcase/LayoutShowCase";
+import { LoaderShowCase } from "../showcase/LoaderShowCase";
+import { ModalShowCase } from "../showcase/ModalShowCase";
 
 export const ComponentOverview = () => {
   return (
-    <Content>
+    <div>
       <h1>Components</h1>
       <LayoutShowCase />
       <LoaderShowCase />
-    </Content>
+      <CollapsibleShowCase/>
+      <ModalShowCase/>
+    </div>
   );
 };

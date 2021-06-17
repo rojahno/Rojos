@@ -1,5 +1,10 @@
-.App {
+/* Deals with padding and margin box overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
 }
+
 a {
   color: black;
   text-decoration: none;

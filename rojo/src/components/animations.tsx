@@ -9,6 +9,38 @@ to{
 }
 `;
 
+export const TurnQuarter = keyframes`
+
+from{
+transform:rotate(0deg);
+
+}
+to{
+  transform:rotate(180deg);
+}
+`;
+
+export const LoadDown = keyframes`
+from {
+  transform: scaleY(0);
+}
+to{
+  transform: scaleY(1);
+    }
+}
+`;
+export const Spin = keyframes`
+from {
+
+        transform: rotate(0deg);
+}
+to{
+
+        transform: rotate(360deg);
+    }
+}
+`;
+
 export const moveInLeft = keyframes`
 ${"70%"} {
     opacity: 0;

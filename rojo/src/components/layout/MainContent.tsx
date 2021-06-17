@@ -14,7 +14,7 @@ export const MainContent = styled.div<ContentProps>`
 
   grid-template-columns: [sidebar] auto [content] 1fr;
 
-  background-color: ${(props) => (props.color ? props.color : "#fff")};
+  background-color: ${(props) => (props.color ? props.color : "##fff")};
   display: flex;
   width: 100%;
   justify-content: ${(props) => (props.centerX ? "center" : "")};
