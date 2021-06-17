@@ -18,6 +18,11 @@ export const CollapsibleShowCase = () => {
             <Image src={SVGLayout} />
           </Card>
         </Link>
+        <Link to={"/card"}>
+          <Card hoverable={true} title={"Card"}>
+            <Image src={SVGLayout} />
+          </Card>
+        </Link>
       </ShowCase>
     </div>
   );

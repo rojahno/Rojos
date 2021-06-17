@@ -23,6 +23,8 @@ export const NeonText = styled.h1`
   box-shadow: inset 0 0 0.5em 0 hsl(0, 100%, 60%), 0 0 0.5em 0 hsl(0, 100%, 60%);
 
   position: relative;
+
+  cursor: pointer;
 `;
 
 export const NeonButton = styled.button`

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Arrow } from "../icon/Arrow";
 
@@ -73,8 +73,6 @@ interface PanelProps {
 
 export const Panel = (props: PanelProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [content, setContent] = useState();
-  const [height, setHeight] = useState();
 
   const handleClick = () => {
     if (!props.expanded) {
@@ -83,16 +81,12 @@ export const Panel = (props: PanelProps) => {
   };
 
   useEffect(() => {
-    const getHeight = () => {
-      console.log("height: " + height);
-    };
     const setExpaned = () => {
       if (props.expanded) {
         setIsActive(true);
       }
     };
     setExpaned();
-    getHeight();
   });
 
   return (

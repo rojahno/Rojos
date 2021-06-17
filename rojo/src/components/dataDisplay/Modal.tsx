@@ -1,18 +1,22 @@
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-const Modal = styled.div<NotificationProps>`
+interface ModalProps {
+  visible?: boolean;
+}
+const Modal = styled.div<ModalProps>`
   display: ${(props) => (props.visible ? "flex" : "none")};
   justify-content: center;
   align-items: center;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
 `;
 
@@ -21,6 +25,7 @@ const ModalContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 0.7em;
   background-color: #fefefe;
   border: 1px solid lightgray;
   width: 520px;
@@ -113,19 +118,40 @@ const ModalContent = styled.div`
 
 interface NotificationProps {
   visible?: boolean;
-  onOk?: () => any;
-  onCancel?: () => any;
+  onOk: () => any;
+  onCancel: () => any;
   children?: any;
 }
 
 export const Notifications = (props: NotificationProps) => {
+  const ref = useRef(null);
+  const [isOpen, setIsOpen] = useState<boolean>();
+
+  useOnClickOutside(ref, () => closeOnClick());
+
+  const closeOnClick = () => {
+    if (isOpen) {
+      props.onCancel();
+    }
+  };
+
+  const trydo = () => {
+    alert("clicked outside");
+  };
+
+  useEffect(() => {
+    const setVisible = () => {
+      setIsOpen(props.visible);
+    };
+
+    setVisible();
+  });
+
   return (
-    <Modal visible={props.visible}>
-      <ModalContainer>
+    <Modal visible={isOpen}>
+      <ModalContainer ref={ref}>
         <ModalHeader>Header</ModalHeader>
-
         <ModalContent>{props.children}</ModalContent>
-
         <ModalFooter>
           <CancelButton onClick={props.onCancel}>Cancel </CancelButton>
           <OKButton onClick={props.onOk}>Ok</OKButton>
@@ -134,3 +160,31 @@ export const Notifications = (props: NotificationProps) => {
     </Modal>
   );
 };
+
+// Hook
+function useOnClickOutside(ref: any, handleOutsideClick: (event: Event) => any) {
+  useEffect(
+    () => {
+      const listener = (event: Event) => {
+        // Do nothing if clicking ref's element or descendent elements
+        if (!ref.current || ref.current.contains(event.target)) {
+          return;
+        }
+        handleOutsideClick(event);
+      };
+      document.addEventListener("mousedown", listener);
+      document.addEventListener("touchstart", listener);
+      return () => {
+        document.removeEventListener("mousedown", listener);
+        document.removeEventListener("touchstart", listener);
+      };
+    },
+    // Add ref and handler to effect dependencies
+    // It's worth noting that because passed in handler is a new ...
+    // ... function on every render that will cause this effect ...
+    // ... callback/cleanup to run every render. It's not a big deal ...
+    // ... but to optimize you can wrap handler in useCallback before ...
+    // ... passing it into this hook.
+    [ref, handleOutsideClick]
+  );
+}

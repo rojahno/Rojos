@@ -16,22 +16,22 @@ export const LoaderShowCase = () => {
     <div>
       <ShowCase title={"Loaders"}>
         <Link to={"/loaders/circle"}>
-          <Card title={"Circle"}>
+          <Card hoverable={true} title={"Circle"}>
             <Image src={SVGLoadingCircle} />
           </Card>
         </Link>
 
-        <Link to={"/"}>
-          <Card title={"Icon"}>
+        <Link to={"/loaders/icon"}>
+          <Card hoverable={true} title={"Icon"}>
             <Image src={SVGHourGlass} />
           </Card>
         </Link>
-
-        <Card title={"Loading bar"}>
-          <Image src={SVGLoadingBar} />
-        </Card>
+        <Link to={"/loaders/bar"}>
+          <Card hoverable={true} title={"Loading bar"}>
+            <Image src={SVGLoadingBar} />
+          </Card>
+        </Link>
       </ShowCase>
-
     </div>
   );
 };
