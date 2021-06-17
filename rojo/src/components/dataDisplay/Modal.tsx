@@ -33,23 +33,13 @@ const ModalContainer = styled.div`
 
   @keyframes grow-modal {
     0% {
-      opacity: 0.2;
-      width: 100px;
+      max-width: 520px;
       height: 50px;
     }
-    25% {
-      opacity: 0.4;
-    }
-    50% {
-      opacity: 0.6;
-    }
-    75% {
-      opacity: 0.8;
-    }
+
     100% {
-      width: 520px;
+      max-width: 520px;
       height: 250px;
-      opacity: 0.9;
     }
   }
 `;
