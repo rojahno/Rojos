@@ -7,7 +7,7 @@ interface ShowCaseProps {
   children?: any;
 }
 const ShowCaseContainer = styled.div`
-  width: 40vw;
+  min-width: 40vw;
 
   border-radius: 0.5rem;
   display: flex;

@@ -7,6 +7,18 @@ interface CardProps {
   hoverable?: boolean;
 }
 
+const CardContainer = styled.div<CardProps>`
+  box-shadow: 0;
+  transition: 0.3s;
+  border: 1px solid #3c3c3c80;
+  border-radius: 0.5rem;
+  width: 100%;
+
+  &:hover {
+    box-shadow: ${(props) => (props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.2)" : "")};
+  }
+`;
+
 const CardTitle = styled.h4`
   display: flex;
   justify-content: center;
@@ -21,18 +33,6 @@ const CardContent = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1em;
-`;
-
-const CardContainer = styled.div<CardProps>`
-  box-shadow: 0;
-  margin: 1em;
-  transition: 0.3s;
-  border: 1px solid #3c3c3c80;
-  border-radius: 0.5rem;
-
-  &:hover {
-    box-shadow: ${(props) => (props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.2)" : "")};
-  }
 `;
 
 export const Card = (props: CardProps) => {

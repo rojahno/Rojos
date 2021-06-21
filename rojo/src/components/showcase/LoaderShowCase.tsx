@@ -27,7 +27,7 @@ export const LoaderShowCase = () => {
           </Card>
         </Link>
         <Link to={"/loaders/bar"}>
-          <Card hoverable={true} title={"Loading bar"}>
+          <Card hoverable={true} title={"Bar"}>
             <Image src={SVGLoadingBar} />
           </Card>
         </Link>
