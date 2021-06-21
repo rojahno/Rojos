@@ -10,7 +10,7 @@ const PanelHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  background-color: #dadada80;
   border-bottom: solid#D3D3D3;
   padding: 1em;
   cursor: pointer;
@@ -21,10 +21,11 @@ const PanelHeader = styled.div`
 
 const CollabsibleItem = styled.div`
   width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #fff;
+  background-color: #dadada80;
   margin-bottom: 1em;
   border-radius: 5px;
 `;
@@ -40,28 +41,8 @@ export const Content = styled.div<ContentProps>`
   height: auto;
   //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
   overflow: hidden;
+  padding: 0.3em;
   transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* animation-name: grow-modal;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  transition: all 0.5s ease;
-
-  @keyframes grow-modal {
-    0% {
-      width: 100%;
-      height: 0px;
-      overflow: hidden;
-    }
-
-    50% {
-      height: 184px;
-    }
-    100% {
-      height: auto;
-      overflow: initial;
-    }
-  }
-  */
 `;
 
 interface PanelProps {

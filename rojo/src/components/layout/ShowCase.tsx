@@ -29,7 +29,7 @@ export const ShowCase = (props: ShowCaseProps) => {
       <Divider />
       <ShowCaseContainer>
         <ShowCaseTitle> {props.title}</ShowCaseTitle>
-        <Grid>{props.children}</Grid>
+        <Grid >{props.children}</Grid>
       </ShowCaseContainer>
     </div>
   );

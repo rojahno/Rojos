@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
+/**
+ * @todo add props
+ */
 interface ModalProps {
   visible?: boolean;
 }
-const Modal = styled.div<ModalProps>`
+const ModalBackground = styled.div<ModalProps>`
   display: ${(props) => (props.visible ? "flex" : "none")};
   justify-content: center;
   align-items: center;
@@ -28,23 +31,23 @@ const ModalContainer = styled.div`
   border-radius: 0.7em;
   background-color: #fefefe;
   border: 1px solid lightgray;
-  width: 520px;
-  height: 250px;
+
+  height: 50vh;
+  max-width: 80vw;
   overflow: auto;
 
   animation-name: grow-modal;
-  animation-duration: 0.2s;
+  animation-duration: 0.3s;
   animation-timing-function: ease;
 
   @keyframes grow-modal {
     0% {
-      max-width: 520px;
+      max-width: 80vw;
       height: 50px;
     }
 
     100% {
-      max-width: 520px;
-      height: 250px;
+      height: 50vh;
     }
   }
 `;
@@ -123,7 +126,7 @@ interface NotificationProps {
   children?: any;
 }
 
-export const Notifications = (props: NotificationProps) => {
+export const Modal = (props: NotificationProps) => {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState<boolean>();
 
@@ -135,10 +138,6 @@ export const Notifications = (props: NotificationProps) => {
     }
   };
 
-  const trydo = () => {
-    alert("clicked outside");
-  };
-
   useEffect(() => {
     const setVisible = () => {
       setIsOpen(props.visible);
@@ -148,7 +147,7 @@ export const Notifications = (props: NotificationProps) => {
   });
 
   return (
-    <Modal visible={isOpen}>
+    <ModalBackground visible={isOpen}>
       <ModalContainer ref={ref}>
         <ModalHeader>Header</ModalHeader>
         <ModalContent>{props.children}</ModalContent>
@@ -157,7 +156,7 @@ export const Notifications = (props: NotificationProps) => {
           <OKButton onClick={props.onOk}>Ok</OKButton>
         </ModalFooter>
       </ModalContainer>
-    </Modal>
+    </ModalBackground>
   );
 };
 

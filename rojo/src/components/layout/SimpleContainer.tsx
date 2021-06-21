@@ -22,7 +22,6 @@ const Container = styled.div`
  */
 export function SimpleContainer(props: SimpleContainerProps) {
   const Content = styled.div<ContentProps>`
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;

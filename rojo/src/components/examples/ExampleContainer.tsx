@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ExampleContainer = styled.div`
-  width: 40vw;
-  height: 40vh;
+  min-width: 40vw;
+  min-height: 40vh;
   border: 1px solid #3c3c3c;
   border-radius: 0.5rem;
   display: flex;

@@ -16,7 +16,7 @@ export const ComponentExample = (props: ComponentExampleProps) => {
   return (
     <Container>
     <Card title={props.title}>
-      <Grid centerX={true} columns={2}>
+      <Grid centerX={true} columns={1}>
           {props.children}
       </Grid>
     </Card>

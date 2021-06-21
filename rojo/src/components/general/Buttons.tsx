@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 interface StyledButtonProps {
+  backgroundColor?: string;
   color?: string;
 }
 export const StyledButton = styled.button<StyledButtonProps>`
-  background-color: ${(props) => (props.color ? props.color : "#3c3c3c")};
+  color: ${(props) => (props.color ? props.color : "#3c3c3c")};
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "#fff")};
   padding: 10px 20px;
   margin: 10px;
   border-radius: 10px;
@@ -13,6 +15,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
   font-size: 1rem;
   box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(111, 117, 133, 0.14);
   transition: transform ease-in 0.1s;
+  width: fit-content;
 
   &:hover {
     transform: scale(1.05);

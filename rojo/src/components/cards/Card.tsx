@@ -12,27 +12,26 @@ const CardTitle = styled.h4`
   justify-content: center;
   border-bottom: 1px solid #3c3c3c80;
   border-radius: 0.1rem;
-  padding: 5px 0px;
   margin: 0;
+  padding: 0.5em;
 `;
 
 const CardContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2vh;
+  padding: 1em;
 `;
-
 
 const CardContainer = styled.div<CardProps>`
   box-shadow: 0;
+  margin: 1em;
   transition: 0.3s;
   border: 1px solid #3c3c3c80;
   border-radius: 0.5rem;
-  width: 100%;
 
   &:hover {
-    box-shadow:${(props) => (props.hoverable ? '0px 8px 16px 0px rgba(0, 0, 0, 0.2)' : "")};
+    box-shadow: ${(props) => (props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.2)" : "")};
   }
 `;
 
