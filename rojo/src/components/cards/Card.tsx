@@ -5,15 +5,19 @@ interface CardProps {
   title?: string;
   content?: any;
   hoverable?: boolean;
+  width?: string;
+  height?: string;
 }
 
 const CardContainer = styled.div<CardProps>`
+  margin: 0.5em;
   box-shadow: 0;
   transition: 0.3s;
   border: 1px solid #3c3c3c80;
   border-radius: 0.5rem;
-  width: 100%;
+  width: ${(props) => (props.width ? props.width : "")};
 
+  //overflow: auto;
   &:hover {
     box-shadow: ${(props) => (props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.2)" : "")};
   }
@@ -31,13 +35,14 @@ const CardTitle = styled.h4`
 const CardContent = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  
   padding: 1em;
 `;
 
 export const Card = (props: CardProps) => {
   return (
-    <CardContainer hoverable={props.hoverable}>
+    <CardContainer width={props.width} height={props.height} hoverable={props.hoverable}>
       <CardTitle>{props.title}</CardTitle>
       <CardContent>{props.children}</CardContent>
     </CardContainer>

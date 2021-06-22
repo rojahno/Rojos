@@ -1,25 +1,28 @@
 import styled from "styled-components";
 import { Card } from "../cards/Card";
-import { Grid } from "../layout/Grid";
 
 interface ComponentExampleProps {
-  children?:any;
+  children?: any;
   title?: string;
 }
 
 const Container = styled.div`
   width: 100%;
   height: 100%;
-  margin-top:2em;
- `; 
+  margin-top: 2em;
+`;
+
+const ColumnContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 export const ComponentExample = (props: ComponentExampleProps) => {
   return (
     <Container>
-    <Card title={props.title}>
-      <Grid centerX={true} columns={1}>
-          {props.children}
-      </Grid>
-    </Card>
+      <Card title={props.title}>
+        <ColumnContainer>{props.children}</ColumnContainer>
+      </Card>
     </Container>
   );
 };

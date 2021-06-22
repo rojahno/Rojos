@@ -9,15 +9,15 @@ import { ComponentExample } from "./ComponentExample";
 export const CircleLoaderExample = () => {
   return (
     <ComponentExample title={"Circle loaders example"}>
-      <Card title={"Circle spinner"}>
+      <Card width={"10em"} title={"Circle spinner"}>
         <CircularLoader />
       </Card>
 
-      <Card title={"Nb spinner"}>
+      <Card width={"10em"} title={"Nb spinner"}>
         <NbSpinner />
       </Card>
 
-      <Card title={"Bt spinner"}>
+      <Card width={"10em"} title={"Bt spinner"}>
         <BtSpinner />
       </Card>
     </ComponentExample>
@@ -27,7 +27,7 @@ export const CircleLoaderExample = () => {
 export const IconLoaderExample = () => {
   return (
     <ComponentExample title={"Icon loaders example"}>
-      <Card title={"Hourglass loader"}>
+      <Card width={"10em"} title={"Hourglass loader"}>
         <Hourglass />
       </Card>
     </ComponentExample>
@@ -37,7 +37,7 @@ export const IconLoaderExample = () => {
 export const BarLoaderExample = () => {
   return (
     <ComponentExample title={"Icon loaders example"}>
-      <Card title={"Loading bar"}>
+      <Card width={"10em"} title={"Loading bar"}>
         <LoadingBar />
       </Card>
     </ComponentExample>

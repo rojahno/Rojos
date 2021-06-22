@@ -53,9 +53,8 @@ interface PanelProps {
 }
 
 /**
- * @deprecated
- * @param props 
- * @returns 
+ * @param props
+ * @returns
  */
 export const Panel = (props: PanelProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
