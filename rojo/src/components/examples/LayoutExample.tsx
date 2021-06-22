@@ -23,10 +23,10 @@ export function LayoutExample() {
     <ComponentExample title={"Example"}>
       <BulletPointList listItems={list} />
       <Layout>
-        <Header centered={true} color={"#51C4C4"}>
+        <Header centered={true} backgroundColor={"#51C4C4"}>
           Header
         </Header>
-        <MainContent centerX={true} centerY={true} color={"#51c4c4ac"}>
+        <MainContent centerX={true} centerY={true} backgroundColor={"#51c4c4ac"}>
           Content
         </MainContent>
         <Footer centered={true} color={"#51C4C4"}>

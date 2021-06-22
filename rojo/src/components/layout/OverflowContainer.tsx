@@ -1,10 +1,12 @@
-import React from "react";
 import styled from "styled-components";
 
 interface ScrollableContainerProps {
   centered?: boolean;
-  maxWidth?: number;
+  maxWidth?: string;
+  maxHeight?: string;
   children: any;
+  height?: string;
+  width?: string;
 }
 
 /**
@@ -13,14 +15,14 @@ interface ScrollableContainerProps {
  * @param props
  * @returns
  */
-export function OverflowContainer(props: ScrollableContainerProps) {
-  const Content = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-  `;
 
-  return <Content>{props.children}</Content>;
-}
+export const OverflowContainer = styled.div<ScrollableContainerProps>`
+  height: ${(props) => (props.height ? props.height : "")};
+  width: ${(props) => (props.width ? props.width : "")};
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : "")};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : "")};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+`;

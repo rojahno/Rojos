@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 interface LayoutProps {
-  children?: any;
   height?: string;
   width?: string;
 }

@@ -16,7 +16,7 @@ export function StartPage() {
   return (
     <Layout height={"100vh"}>
       <Router>
-        <Header color={"#31202b"} centered={true}>
+        <Header backgroundColor={"#31202b"} centered={true}>
           <Link to={"/"}>
             <NeonText>Rojo</NeonText>
           </Link>

@@ -6,6 +6,9 @@ import styled from "styled-components";
  */
 interface ModalProps {
   visible?: boolean;
+  height?: string;
+  width?: string;
+  maxWidth?: string;
 }
 const ModalBackground = styled.div<ModalProps>`
   display: ${(props) => (props.visible ? "flex" : "none")};
@@ -23,7 +26,7 @@ const ModalBackground = styled.div<ModalProps>`
   box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
 `;
 
-const ModalContainer = styled.div`
+const ModalContainer = styled.div<ModalProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,8 +35,9 @@ const ModalContainer = styled.div`
   background-color: #fefefe;
   border: 1px solid lightgray;
 
-  height: 50vh;
-  max-width: 80vw;
+  height: ${(props) => (props.height ? props.height : "50vh")};
+  width: ${(props) => (props.width ? props.width : "")};
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : "80vw")};
   overflow: auto;
 
   animation-name: grow-modal;
@@ -124,6 +128,9 @@ interface NotificationProps {
   onOk: () => any;
   onCancel: () => any;
   children?: any;
+  height?: string;
+  width?: string;
+  maxWidth?: string;
 }
 
 export const Modal = (props: NotificationProps) => {
@@ -148,7 +155,7 @@ export const Modal = (props: NotificationProps) => {
 
   return (
     <ModalBackground visible={isOpen}>
-      <ModalContainer ref={ref}>
+      <ModalContainer ref={ref} height={props.height} width={props.width} maxWidth={props.maxWidth}>
         <ModalHeader>Header</ModalHeader>
         <ModalContent>{props.children}</ModalContent>
         <ModalFooter>
@@ -162,28 +169,19 @@ export const Modal = (props: NotificationProps) => {
 
 // Hook
 function useOnClickOutside(ref: any, handleOutsideClick: (event: Event) => any) {
-  useEffect(
-    () => {
-      const listener = (event: Event) => {
-        // Do nothing if clicking ref's element or descendent elements
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handleOutsideClick(event);
-      };
-      document.addEventListener("mousedown", listener);
-      document.addEventListener("touchstart", listener);
-      return () => {
-        document.removeEventListener("mousedown", listener);
-        document.removeEventListener("touchstart", listener);
-      };
-    },
-    // Add ref and handler to effect dependencies
-    // It's worth noting that because passed in handler is a new ...
-    // ... function on every render that will cause this effect ...
-    // ... callback/cleanup to run every render. It's not a big deal ...
-    // ... but to optimize you can wrap handler in useCallback before ...
-    // ... passing it into this hook.
-    [ref, handleOutsideClick]
-  );
+  useEffect(() => {
+    const listener = (event: Event) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handleOutsideClick(event);
+    };
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handleOutsideClick]);
 }
