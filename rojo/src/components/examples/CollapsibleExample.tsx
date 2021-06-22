@@ -5,13 +5,13 @@ import { ComponentExample } from "./ComponentExample";
 export const CollapsibleExample = () => {
   return (
     <ComponentExample title={"Collapsible example"}>
-      <Card width={"75vw"} title={"Forced Expanded"}>
+      <Card width={"75%"} title={"Forced Expanded"}>
         <Panel expanded={true} header={"Dette er en header"}>
           <p>Dette er contenten</p>
         </Panel>
       </Card>
 
-      <Card width={"75vw"} title={"Normal collapsible"}>
+      <Card width={"75%"} title={"Normal collapsible"}>
         <Panel header={"Dette er en header"}>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quidem facilis fugit aliquam nesciunt necessitatibus rem sint quibusdam, mollitia esse cum commodi id excepturi fugiat
@@ -23,13 +23,13 @@ export const CollapsibleExample = () => {
         </Panel>
       </Card>
 
-      <Card width={"75vw"}>
+      <Card width={"75%"}>
         <Panel header={"Dette er en header"}>
           <p>Dette er contenten</p>
         </Panel>
       </Card>
 
-      <Card width={"75vw"}>
+      <Card width={"75%"}>
         <Panel header={"Dette er en header"}>
           <p>Dette er contenten</p>
         </Panel>

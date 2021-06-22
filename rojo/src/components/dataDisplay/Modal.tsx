@@ -43,6 +43,7 @@ const ModalContainer = styled.div<ModalProps>`
   animation-name: grow-modal;
   animation-duration: 0.3s;
   animation-timing-function: ease;
+  animation-iteration-count: 1;
 
   @keyframes grow-modal {
     0% {

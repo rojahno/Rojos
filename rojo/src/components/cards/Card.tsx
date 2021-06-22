@@ -16,6 +16,7 @@ const CardContainer = styled.div<CardProps>`
   border: 1px solid #3c3c3c80;
   border-radius: 0.5rem;
   width: ${(props) => (props.width ? props.width : "")};
+  height: ${(props) => (props.height ? props.height : "")};
 
   //overflow: auto;
   &:hover {

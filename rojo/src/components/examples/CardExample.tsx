@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Card } from "../cards/Card";
 import { Content } from "../layout/Content";
+import { ComponentExample } from "./ComponentExample";
 
 const ExampleContainer = styled.div`
   display: flex;
@@ -9,18 +10,16 @@ const ExampleContainer = styled.div`
 `;
 export const CardExample = () => {
   return (
-    <Content>
-      <Card title={"Card example"}>
-        <ExampleContainer>
-          <h1>Cards</h1>
+    <ComponentExample title={"Card examples"}>
+      <h1>Cards</h1>
 
-          <Card title={"Card Title"}>Card Content</Card>
-          <h1>Hoverable</h1>
-          <Card hoverable={true} title={"Hoverable card"}>
-            Hover this element
-          </Card>
-        </ExampleContainer>
+      <Card width={"10em"} height={"7em"} title={"Card Title"}>
+        Card Content
       </Card>
-    </Content>
+      <h1>Hoverable</h1>
+      <Card width={"10em"} height={"7em"} hoverable={true} title={"Hoverable card"}>
+        Hover this element
+      </Card>
+    </ComponentExample>
   );
 };
