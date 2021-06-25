@@ -16,7 +16,7 @@ export const ModalExample = () => {
     <Content>
 
         <ComponentExample title={"Example"}>
-          <Modal onCancel={toggle} onOk={toggle} visible={open}>
+          <Modal onCancel={toggle} onOk={toggle} visible={open} width={'530px'}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolores nesciunt, dolore cupiditate doloremque unde rem molestiae eius quisquam nulla ducimus consequuntur ad totam
             adipisci, quis minus esse necessitatibus accusantium delectus ullam iste ipsum aperiam. Veniam, enim. Quam sunt laudantium aspernatur aliquid, ipsa facere optio necessitatibus alias,
             dolores ex voluptate?

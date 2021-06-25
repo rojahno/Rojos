@@ -1,13 +1,6 @@
-import styled from "styled-components";
 import { Card } from "../cards/Card";
-import { Content } from "../layout/Content";
 import { ComponentExample } from "./ComponentExample";
 
-const ExampleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
 export const CardExample = () => {
   return (
     <ComponentExample title={"Card examples"}>

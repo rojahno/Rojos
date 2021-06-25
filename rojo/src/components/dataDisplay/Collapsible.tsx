@@ -13,6 +13,7 @@ const PanelHeader = styled.div`
   background-color: #dadada80;
   border-bottom: solid#D3D3D3;
   padding: 1em;
+
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -35,14 +36,15 @@ interface ContentProps {
 }
 
 export const Content = styled.div<ContentProps>`
-  display: border-box;
+  //visibility: ${(props) => (props.hide ? "hidden" : "border-box")};
   position: relative;
-  max-height: ${(props) => (props.hide ? "0px" : "100px")};
+  //max-height: ${(props) => (props.hide ? "0px" : "100px")};
   height: auto;
+  width: 100%;
   //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
   overflow: hidden;
   padding: 0.3em;
-  transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
+  //transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 interface PanelProps {
@@ -81,7 +83,7 @@ export const Panel = (props: PanelProps) => {
         <Arrow rotate={!isActive} />
       </PanelHeader>
       <Content
-        hide={!isActive}
+        hidden={!isActive}
         //hidden={!isActive}
       >
         {props.children}

@@ -4,11 +4,11 @@ import { Footer } from "../layout/Footer";
 import { Layout } from "../layout/Layout";
 import { Grid } from "../layout/Grid";
 import { Box } from "../layout/Box";
-import { BulletPointList } from "../general/Lists";
 import { ComponentExample } from "./ComponentExample";
 import { OverflowContainer } from "../layout/OverflowContainer";
 import styled from "styled-components";
 import { Divider } from "../layout/Divider";
+import { PageLayout } from "../displayPage/PageLayout";
 
 /**
  * @summary An example of how to apply the different layout in this library.
@@ -17,23 +17,28 @@ import { Divider } from "../layout/Divider";
  */
 
 export function LayoutExample() {
-  const list = ["This is good because...", "Layout is the parent component", "Header, Content and Footer are children components"];
-
   return (
-    <ComponentExample title={"Example"}>
-      <BulletPointList listItems={list} />
-      <Layout>
-        <Header centered={true} backgroundColor={"#51C4C4"}>
-          Header
-        </Header>
-        <MainContent centerX={true} centerY={true} backgroundColor={"#51c4c4ac"}>
-          Content
-        </MainContent>
-        <Footer centered={true} color={"#51C4C4"}>
-          Footer
-        </Footer>
-      </Layout>
-    </ComponentExample>
+    <PageLayout
+      componentName={"Layout example"}
+      componentSummary={"The Layout components makes for an easy and responsible way to design your website."}
+      componentDescription={
+        'The layout components consist of four different components:  "Layout", "Header", "MainContent" and "Footer". These components creates a responsive and easy-to-use layout for your webpage. '
+      }
+    >
+      <ComponentExample title={"Normal layout example"}>
+        <Layout width={"10em"} height={"7em"}>
+          <Header centered={true} backgroundColor={"#51C4C4"}>
+            Header
+          </Header>
+          <MainContent centerX={true} centerY={true} backgroundColor={"#51c4c4ac"}>
+            Content
+          </MainContent>
+          <Footer centered={true} color={"#51C4C4"}>
+            Footer
+          </Footer>
+        </Layout>
+      </ComponentExample>
+    </PageLayout>
   );
 }
 

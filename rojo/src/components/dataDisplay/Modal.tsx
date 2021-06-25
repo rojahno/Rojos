@@ -27,6 +27,7 @@ const ModalBackground = styled.div<ModalProps>`
 `;
 
 const ModalContainer = styled.div<ModalProps>`
+  padding: 0.5em; 
   display: flex;
   flex-direction: column;
   justify-content: center;
