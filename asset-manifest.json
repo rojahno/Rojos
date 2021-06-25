@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Rojos/static/css/main.3b8b2778.chunk.css",
-    "main.js": "/Rojos/static/js/main.6a60566d.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.6a60566d.chunk.js.map",
+    "main.css": "/Rojos/static/css/main.6bc7c40e.chunk.css",
+    "main.js": "/Rojos/static/js/main.3dbad196.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.3dbad196.chunk.js.map",
     "runtime-main.js": "/Rojos/static/js/runtime-main.c5d7152a.js",
     "runtime-main.js.map": "/Rojos/static/js/runtime-main.c5d7152a.js.map",
-    "static/js/2.569f937a.chunk.js": "/Rojos/static/js/2.569f937a.chunk.js",
-    "static/js/2.569f937a.chunk.js.map": "/Rojos/static/js/2.569f937a.chunk.js.map",
+    "static/js/2.591372b2.chunk.js": "/Rojos/static/js/2.591372b2.chunk.js",
+    "static/js/2.591372b2.chunk.js.map": "/Rojos/static/js/2.591372b2.chunk.js.map",
     "static/js/3.46de549b.chunk.js": "/Rojos/static/js/3.46de549b.chunk.js",
     "static/js/3.46de549b.chunk.js.map": "/Rojos/static/js/3.46de549b.chunk.js.map",
     "index.html": "/Rojos/index.html",
-    "static/css/main.3b8b2778.chunk.css.map": "/Rojos/static/css/main.3b8b2778.chunk.css.map",
-    "static/js/2.569f937a.chunk.js.LICENSE.txt": "/Rojos/static/js/2.569f937a.chunk.js.LICENSE.txt",
+    "static/css/main.6bc7c40e.chunk.css.map": "/Rojos/static/css/main.6bc7c40e.chunk.css.map",
+    "static/js/2.591372b2.chunk.js.LICENSE.txt": "/Rojos/static/js/2.591372b2.chunk.js.LICENSE.txt",
     "static/media/arrow.561a49b3.svg": "/Rojos/static/media/arrow.561a49b3.svg",
     "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
     "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c5d7152a.js",
-    "static/js/2.569f937a.chunk.js",
-    "static/css/main.3b8b2778.chunk.css",
-    "static/js/main.6a60566d.chunk.js"
+    "static/js/2.591372b2.chunk.js",
+    "static/css/main.6bc7c40e.chunk.css",
+    "static/js/main.3dbad196.chunk.js"
   ]
 }
