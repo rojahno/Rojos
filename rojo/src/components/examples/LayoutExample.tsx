@@ -86,15 +86,15 @@ export const GridExample = () => {
   );
 };
 const Overflow = styled.div`
-  height: 50px;
-  width: 50%;
+  height: 7em;
+  //width: 50%;
   display: flex;
   justify-content: center;
 `;
 export const OverflowExample = () => {
   return (
     <ComponentExample title={"Overflow Example"}>
-      <OverflowContainer>
+      <OverflowContainer width={'50%'}>
         <Overflow>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           <br />
