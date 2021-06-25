@@ -9,6 +9,14 @@ import { OverflowContainer } from "../layout/OverflowContainer";
 import styled from "styled-components";
 import { Divider } from "../layout/Divider";
 import { PageLayout } from "../displayPage/PageLayout";
+import { SideBar } from "../sideBar/SideBar";
+import { Content } from "../layout/Content";
+
+const VerticalText = styled.p`
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  cursor: default;
+`;
 
 /**
  * @summary An example of how to apply the different layout in this library.
@@ -26,12 +34,31 @@ export function LayoutExample() {
       }
     >
       <ComponentExample title={"Normal layout example"}>
-        <Layout width={"10em"} height={"7em"}>
+        <Layout width={"100%"} height={"100%"}>
           <Header centered={true} backgroundColor={"#51C4C4"}>
             Header
           </Header>
           <MainContent centerX={true} centerY={true} backgroundColor={"#51c4c4ac"}>
             Content
+          </MainContent>
+          <Footer centered={true} color={"#51C4C4"}>
+            Footer
+          </Footer>
+        </Layout>
+      </ComponentExample>
+
+      <ComponentExample title={"Sidebar layout example"}>
+        <Layout width={"100%"} height={"100%"}>
+          <Header centered={true} backgroundColor={"#51C4C4"}>
+            Header
+          </Header>
+          <MainContent centerX={true} centerY={true} backgroundColor={"#51c4c4ac"}>
+            <SideBar centerY={true} centerX={true}>
+              <VerticalText>Sidebar</VerticalText>
+            </SideBar>
+            <Content centerX={true} centerY={true}>
+              Content
+            </Content>
           </MainContent>
           <Footer centered={true} color={"#51C4C4"}>
             Footer

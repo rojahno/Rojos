@@ -24,7 +24,8 @@ h1 {
   letter-spacing: 0em;
 }
 
-p {
+p,
+div {
   color: #000000;
   font-family: Roboto;
   letter-spacing: 0.15008px;
