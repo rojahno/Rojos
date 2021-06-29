@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/Rojos/static/css/main.6bc7c40e.chunk.css",
-    "main.js": "/Rojos/static/js/main.3dbad196.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.3dbad196.chunk.js.map",
+    "main.css": "/Rojos/static/css/main.a163ad5f.chunk.css",
+    "main.js": "/Rojos/static/js/main.b4211043.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.b4211043.chunk.js.map",
     "runtime-main.js": "/Rojos/static/js/runtime-main.c5d7152a.js",
     "runtime-main.js.map": "/Rojos/static/js/runtime-main.c5d7152a.js.map",
-    "static/js/2.591372b2.chunk.js": "/Rojos/static/js/2.591372b2.chunk.js",
-    "static/js/2.591372b2.chunk.js.map": "/Rojos/static/js/2.591372b2.chunk.js.map",
+    "static/js/2.487b89cd.chunk.js": "/Rojos/static/js/2.487b89cd.chunk.js",
+    "static/js/2.487b89cd.chunk.js.map": "/Rojos/static/js/2.487b89cd.chunk.js.map",
     "static/js/3.46de549b.chunk.js": "/Rojos/static/js/3.46de549b.chunk.js",
     "static/js/3.46de549b.chunk.js.map": "/Rojos/static/js/3.46de549b.chunk.js.map",
     "index.html": "/Rojos/index.html",
-    "static/css/main.6bc7c40e.chunk.css.map": "/Rojos/static/css/main.6bc7c40e.chunk.css.map",
-    "static/js/2.591372b2.chunk.js.LICENSE.txt": "/Rojos/static/js/2.591372b2.chunk.js.LICENSE.txt",
+    "static/css/main.a163ad5f.chunk.css.map": "/Rojos/static/css/main.a163ad5f.chunk.css.map",
+    "static/js/2.487b89cd.chunk.js.LICENSE.txt": "/Rojos/static/js/2.487b89cd.chunk.js.LICENSE.txt",
     "static/media/arrow.561a49b3.svg": "/Rojos/static/media/arrow.561a49b3.svg",
     "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
     "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
-    "static/media/hourglass.8f57b54c.svg": "/Rojos/static/media/hourglass.8f57b54c.svg",
+    "static/media/hourglass.eb417c47.svg": "/Rojos/static/media/hourglass.eb417c47.svg",
     "static/media/layout.472e7541.svg": "/Rojos/static/media/layout.472e7541.svg",
     "static/media/loading-bar.31b26263.svg": "/Rojos/static/media/loading-bar.31b26263.svg",
     "static/media/loading-circle.ca0bcd65.svg": "/Rojos/static/media/loading-circle.ca0bcd65.svg",
-    "static/media/overflow-text.3022eea5.svg": "/Rojos/static/media/overflow-text.3022eea5.svg"
+    "static/media/overflow-text.cdde3e58.svg": "/Rojos/static/media/overflow-text.cdde3e58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c5d7152a.js",
-    "static/js/2.591372b2.chunk.js",
-    "static/css/main.6bc7c40e.chunk.css",
-    "static/js/main.3dbad196.chunk.js"
+    "static/js/2.487b89cd.chunk.js",
+    "static/css/main.a163ad5f.chunk.css",
+    "static/js/main.b4211043.chunk.js"
   ]
 }
