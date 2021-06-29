@@ -24,5 +24,4 @@ export const OverflowContainer = styled.div<ScrollableContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
-`;
+  overflow: auto;`;

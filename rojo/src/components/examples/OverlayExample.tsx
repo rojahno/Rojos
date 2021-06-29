@@ -1,12 +1,12 @@
 import { SideOverlay } from "../overlay/SideOverlay";
-import { ExampleContainer } from "./ExampleContainer";
+import { ComponentExample } from "./ComponentExample";
 
 export const OverlayExample = () => {
   return (
-    <ExampleContainer>
+    <ComponentExample title={"Example"}>
       <h1>Overlay</h1>
       <SideOverlay buttonText={"Left overlay"} />
       <SideOverlay moveRight={true} buttonText={"Right overlay"} />
-    </ExampleContainer>
+    </ComponentExample>
   );
 };

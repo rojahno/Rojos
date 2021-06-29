@@ -5,8 +5,17 @@ import { MainContent } from "../layout/MainContent";
 import { NeonText } from "../neon/Neon";
 import { Route, HashRouter as Router, Switch, Link } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
-import { DividerExample, GridExample, LayoutExample, OverflowExample } from "../examples/LayoutExample";
-import { BarLoaderExample, CircleLoaderExample, IconLoaderExample } from "../examples/LoaderExample";
+import {
+  DividerExample,
+  GridExample,
+  LayoutExample,
+  OverflowExample,
+} from "../examples/LayoutExample";
+import {
+  BarLoaderExample,
+  CircleLoaderExample,
+  IconLoaderExample,
+} from "../examples/LoaderExample";
 import { CollapsibleExample } from "../examples/CollapsibleExample";
 import { ModalExample } from "../examples/ModalExample";
 import { CardExample } from "../examples/CardExample";
@@ -29,11 +38,32 @@ export function StartPage() {
               <Route path="/grid" exact component={GridExample}></Route>
               <Route path="/overflow" exact component={OverflowExample}></Route>
               <Route path="/divider" exact component={DividerExample}></Route>
-              <Route path="/accordion" exact component={CollapsibleExample}></Route>
-              <Route path="/notification" exact component={ModalExample}></Route>
-              <Route path="/loaders/icon" exact component={IconLoaderExample}></Route>
-              <Route path="/loaders/bar" exact component={BarLoaderExample}></Route>
-              <Route path="/loaders/circle" exact component={CircleLoaderExample}></Route>
+              <Route
+                path="/accordion"
+                exact
+                component={CollapsibleExample}
+              ></Route>
+              <Route
+                path="/notification"
+                exact
+                component={ModalExample}
+              ></Route>
+              <Route
+                path="/loaders/icon"
+                exact
+                component={IconLoaderExample}
+              ></Route>
+              <Route
+                path="/loaders/bar"
+                exact
+                component={BarLoaderExample}
+              ></Route>
+              <Route
+                path="/loaders/circle"
+                exact
+                component={CircleLoaderExample}
+              ></Route>
+
               <Route path="/card" exact component={CardExample}></Route>
             </Switch>
           </Content>
