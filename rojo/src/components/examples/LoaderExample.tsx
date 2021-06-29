@@ -36,7 +36,7 @@ export const IconLoaderExample = () => {
 
 export const BarLoaderExample = () => {
   return (
-    <ComponentExample title={"Icon loaders example"}>
+    <ComponentExample title={"Loading bar example"}>
       <Card width={"10em"} title={"Loading bar"}>
         <LoadingBar />
       </Card>

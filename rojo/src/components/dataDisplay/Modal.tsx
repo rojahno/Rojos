@@ -1,9 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
-/**
- * @todo add props
- */
 interface ModalProps {
   visible?: boolean;
   height?: string;
@@ -27,7 +24,7 @@ const ModalBackground = styled.div<ModalProps>`
 `;
 
 const ModalContainer = styled.div<ModalProps>`
-  padding: 0.5em; 
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;

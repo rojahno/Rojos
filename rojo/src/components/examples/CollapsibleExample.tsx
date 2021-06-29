@@ -5,12 +5,6 @@ import { ComponentExample } from "./ComponentExample";
 export const CollapsibleExample = () => {
   return (
     <ComponentExample title={"Collapsible example"}>
-      <Card width={"75%"} title={"Forced Expanded"}>
-        <Panel expanded={true} header={"Dette er en header"}>
-          <p>Dette er contenten</p>
-        </Panel>
-      </Card>
-
       <Card width={"75%"} title={"Normal collapsible"}>
         <Panel header={"Dette er en header"}>
           <p>
@@ -23,14 +17,8 @@ export const CollapsibleExample = () => {
         </Panel>
       </Card>
 
-      <Card width={"75%"}>
-        <Panel header={"Dette er en header"}>
-          <p>Dette er contenten</p>
-        </Panel>
-      </Card>
-
-      <Card width={"75%"}>
-        <Panel header={"Dette er en header"}>
+      <Card width={"75%"} title={"Forced Expanded"}>
+        <Panel expanded={true} header={"Dette er en header"}>
           <p>Dette er contenten</p>
         </Panel>
       </Card>
