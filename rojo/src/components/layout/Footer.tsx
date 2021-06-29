@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Footer = styled.div<FooterProps>`
   grid-row-start: footer;
-  background-color: ${(props) => (props.color ? props.color : "#fff")};
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "#fff")};
   display: flex;
   justify-content: ${(props) => (props.centered ? "center" : "")};
   align-items: ${(props) => (props.centered ? "center" : "")};
@@ -16,5 +16,5 @@ interface FooterProps {
   height?: string;
   padding?: string;
   margin?: string;
-  color?: string;
+  backgroundColor?: string;
 }

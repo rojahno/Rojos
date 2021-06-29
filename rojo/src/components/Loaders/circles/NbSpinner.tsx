@@ -10,7 +10,7 @@ export const NbSpinner = styled.div<SpinnerProps>`
   height: 50px;
   margin: 0;
   background: transparent;
-  border-top: 4px solid ${(props) => (props.color ? props.color: "#3c3c3c")};;
+  border-top: 4px solid ${(props) => (props.color ? props.color: "#000000aa")};;
   border-right: 4px solid transparent;
   border-radius: 50%;
   -webkit-animation: 1s ${Spin} linear infinite;

@@ -40,7 +40,7 @@ export function LayoutExample() {
       }
     >
       <ComponentExample title={"Normal layout example"}>
-        <Layout width={"100%"} height={"100%"}>
+        <Layout width={"100%"} height={"100%"} backgroundColor={"#51c4c4ac"}>
           <Header centered={true} backgroundColor={"#51C4C4"}>
             Header
           </Header>
@@ -51,7 +51,7 @@ export function LayoutExample() {
           >
             Content
           </MainContent>
-          <Footer centered={true} color={"#51C4C4"}>
+          <Footer centered={true} backgroundColor={"#51C4C4"}>
             Footer
           </Footer>
         </Layout>
@@ -74,7 +74,7 @@ export function LayoutExample() {
               Content
             </Content>
           </MainContent>
-          <Footer centered={true} color={"#51C4C4"}>
+          <Footer centered={true} backgroundColor={"#51C4C4"}>
             Footer
           </Footer>
         </Layout>
@@ -187,11 +187,11 @@ export const DividerExample = () => {
 
 export const OverlayExample = () => {
   return (
-    <ComponentExample title={"Example"}>
-      <h1>Overlay</h1>
-      <SideOverlay buttonText={"Left overlay"} />
-      <SideOverlay moveRight={true} buttonText={"Right overlay"} />
+    <ComponentExample title={"Overlay example"}>
+      <div>
+        <SideOverlay buttonText={"Left overlay"} />
+        <SideOverlay moveRight={true} buttonText={"Right overlay"} />
+      </div>
     </ComponentExample>
   );
 };
-

@@ -24,14 +24,14 @@ import { Content } from "../layout/Content";
 
 export function StartPage() {
   return (
-    <Layout height={"100vh"}>
+    <Layout height={"100vh"} backgroundColor={"#31202b"}>
       <Router>
         <Header backgroundColor={"#31202b"} centered={true}>
           <Link to={"/"}>
             <NeonText>Rojo</NeonText>
           </Link>
         </Header>
-        <MainContent centerX={true}>
+        <MainContent backgroundColor={"#44475a"} centerX={true}>
           <Content>
             <Switch>
               <Route path="/" exact component={ComponentOverview}></Route>
@@ -71,7 +71,7 @@ export function StartPage() {
             </Switch>
           </Content>
         </MainContent>
-        <Footer centered={true}>Dunde AS</Footer>
+        <Footer backgroundColor={"#31202b"} centered={true}>Dunde AS</Footer>
       </Router>
     </Layout>
   );

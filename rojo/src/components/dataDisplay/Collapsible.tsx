@@ -10,7 +10,7 @@ const PanelHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #dadada80;
+  background-color: #dadada50;
   border-bottom: solid#D3D3D3;
   padding: 1em;
 
@@ -27,8 +27,8 @@ const CollabsibleItem = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   background-color: #dadada80;
-  margin-bottom: 1em;
-  border-radius: 5px;
+  //margin-bottom: 1em;
+  //border-radius: 5px;
 `;
 
 interface ContentProps {
@@ -44,7 +44,7 @@ export const Content = styled.div<ContentProps>`
   //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
   overflow: hidden;
   padding: 0.3em;
-  //transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 interface PanelProps {
@@ -84,7 +84,6 @@ export const Panel = (props: PanelProps) => {
       </PanelHeader>
       <Content
         hidden={!isActive}
-        //hidden={!isActive}
       >
         {props.children}
       </Content>

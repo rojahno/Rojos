@@ -20,7 +20,8 @@ const ModalBackground = styled.div<ModalProps>`
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+    0 9px 28px 8px #0000000d;
 `;
 
 const ModalContainer = styled.div<ModalProps>`
@@ -30,6 +31,7 @@ const ModalContainer = styled.div<ModalProps>`
   justify-content: center;
   align-items: center;
   border-radius: 0.7em;
+  color: black;
   background-color: #fefefe;
   border: 1px solid lightgray;
 
@@ -56,6 +58,7 @@ const ModalContainer = styled.div<ModalProps>`
 `;
 
 const ModalHeader = styled.h3`
+  color: black;
   width: 100%;
   height: 2em;
   padding: 0.5em;
@@ -77,7 +80,8 @@ const ModalFooter = styled.div`
 const ModalButton = styled.button`
   font-size: 1rem;
   margin: 0.5em;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(111, 117, 133, 0.14);
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(111, 117, 133, 0.14);
   transition: transform ease-in 0.1s;
   border-style: none;
   padding: 0.3em 1.3em;
@@ -117,6 +121,7 @@ const CancelButton = styled(ModalButton)`
 `;
 
 const ModalContent = styled.div`
+  color: black;
   width: 100%;
   height: 100%;
   padding: 1em;
@@ -154,7 +159,12 @@ export const Modal = (props: NotificationProps) => {
 
   return (
     <ModalBackground visible={isOpen}>
-      <ModalContainer ref={ref} height={props.height} width={props.width} maxWidth={props.maxWidth}>
+      <ModalContainer
+        ref={ref}
+        height={props.height}
+        width={props.width}
+        maxWidth={props.maxWidth}
+      >
         <ModalHeader>Header</ModalHeader>
         <ModalContent>{props.children}</ModalContent>
         <ModalFooter>
@@ -167,7 +177,10 @@ export const Modal = (props: NotificationProps) => {
 };
 
 // Hook
-function useOnClickOutside(ref: any, handleOutsideClick: (event: Event) => any) {
+function useOnClickOutside(
+  ref: any,
+  handleOutsideClick: (event: Event) => any
+) {
   useEffect(() => {
     const listener = (event: Event) => {
       // Do nothing if clicking ref's element or descendent elements

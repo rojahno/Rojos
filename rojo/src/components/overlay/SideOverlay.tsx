@@ -10,17 +10,17 @@ interface SideNavProps {
 }
 
 const SideNav = styled.div<SideNavProps>`
-  height: 100%; /* 100% Full-height */
+  height: 100%;
   width: ${(props) => (props.width ? props.width : "25hv")};
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  position: fixed;
+  z-index: 1;
   left: ${(props) => (props.moveRight ? "" : "0")};
   right: ${(props) => (props.moveRight ? "0" : "")};
-  top: 0; /* Stay at the top */
-  //padding: 1em;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  top: 0;
+
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
 
   display: flex;
   flex-direction: column;

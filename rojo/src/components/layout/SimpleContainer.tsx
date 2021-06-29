@@ -13,6 +13,8 @@ const Container = styled.div`
   justify-content: center;
   margin: 0px;
   padding: 0px;
+  width: 100%;
+  height: 100%;
 `;
 
 /**
