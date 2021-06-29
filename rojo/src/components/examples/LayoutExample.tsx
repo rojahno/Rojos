@@ -14,6 +14,7 @@ import { Content } from "../layout/Content";
 import React from "react";
 import { MacScrollContainer } from "../scrollbar/Scrollbars";
 import { Card } from "../cards/Card";
+import { SideOverlay } from "../overlay/SideOverlay";
 
 const VerticalText = styled.p`
   writing-mode: vertical-lr;
@@ -183,3 +184,14 @@ export const DividerExample = () => {
     </ComponentExample>
   );
 };
+
+export const OverlayExample = () => {
+  return (
+    <ComponentExample title={"Example"}>
+      <h1>Overlay</h1>
+      <SideOverlay buttonText={"Left overlay"} />
+      <SideOverlay moveRight={true} buttonText={"Right overlay"} />
+    </ComponentExample>
+  );
+};
+

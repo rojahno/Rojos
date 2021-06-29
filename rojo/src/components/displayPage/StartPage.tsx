@@ -10,6 +10,7 @@ import {
   GridExample,
   LayoutExample,
   OverflowExample,
+  OverlayExample,
 } from "../examples/LayoutExample";
 import {
   BarLoaderExample,
@@ -38,6 +39,8 @@ export function StartPage() {
               <Route path="/grid" exact component={GridExample}></Route>
               <Route path="/overflow" exact component={OverflowExample}></Route>
               <Route path="/divider" exact component={DividerExample}></Route>
+              <Route path="/overlay" exact component={OverlayExample}></Route>
+
               <Route
                 path="/accordion"
                 exact

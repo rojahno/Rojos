@@ -17,7 +17,7 @@ const SideNav = styled.div<SideNavProps>`
   left: ${(props) => (props.moveRight ? "" : "0")};
   right: ${(props) => (props.moveRight ? "0" : "")};
   top: 0; /* Stay at the top */
-
+  //padding: 1em;
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -36,7 +36,7 @@ const CloseButton = styled.a<CloseButtonProps>`
   font-size: 3vh;
   width: 90%;
   color: #818181;
-  padding: 0em 0em;
+  padding: 0.5em;
   transition: 0.3s;
 
   &:hover {
@@ -72,7 +72,7 @@ export const SideOverlay = (props: SideNavProps) => {
       <StyledButton onClick={showOverlay}>{props.buttonText}</StyledButton>
       <SideNav width={width} moveRight={props.moveRight}>
         <CloseButton right={props.moveRight} onClick={hideOverlay}>
-          X
+          x
         </CloseButton>
         <SideLinks>Home</SideLinks>
         <SideLinks>Contact</SideLinks>
