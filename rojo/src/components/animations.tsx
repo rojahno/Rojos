@@ -79,3 +79,25 @@ export const Glow = keyframes`
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
   `;
+export const MoveLeft = keyframes`
+  from {
+    left: 3em;
+    opacity: 0;
+  }
+
+  to {
+    left: 0em;
+    opacity: 1;
+  }
+`;
+export const MoveUp = keyframes`
+  from {
+    top: 3em;
+    opacity: 0;
+  }
+
+  to {
+    top : 0em;
+    opacity: 1;
+  }
+`;
