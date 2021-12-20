@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CollapsibleShowCase } from "../showcase/CollapsibleShowCase";
+import { EffectsShowCase } from "../showcase/EffectsShowCase";
 import { LayoutShowCase } from "../showcase/LayoutShowCase";
 import { LoaderShowCase } from "../showcase/LoaderShowCase";
 import { ModalShowCase } from "../showcase/ModalShowCase";
@@ -19,6 +20,7 @@ export const ComponentOverview = () => {
       <LoaderShowCase />
       <CollapsibleShowCase />
       <ModalShowCase />
+      <EffectsShowCase/>
     </div>
   );
 };

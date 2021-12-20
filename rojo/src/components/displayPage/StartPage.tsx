@@ -21,6 +21,7 @@ import { CollapsibleExample } from "../examples/CollapsibleExample";
 import { ModalExample } from "../examples/ModalExample";
 import { CardExample } from "../examples/CardExample";
 import { Content } from "../layout/Content";
+import { EffectsExample } from "../examples/EffectsExample";
 
 export function StartPage() {
   return (
@@ -40,6 +41,7 @@ export function StartPage() {
               <Route path="/overflow" exact component={OverflowExample}></Route>
               <Route path="/divider" exact component={DividerExample}></Route>
               <Route path="/overlay" exact component={OverlayExample}></Route>
+              <Route path="/effects" exact component={EffectsExample}></Route>
 
               <Route
                 path="/accordion"
