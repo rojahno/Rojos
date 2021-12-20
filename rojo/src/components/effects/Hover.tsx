@@ -3,64 +3,47 @@ import styled from "styled-components";
 
 interface HoverProps {
   children?: any;
-  title?: string;
-  content?: any;
-  hoverable?: boolean;
-  width?: string;
-  height?: string;
-  backgroundColor?: string;
+  hovering?: boolean;
+  background?: string;
+  gradient?: string;
+  x: number;
+  y: number;
 }
 
 const HoverContainer = styled.div<HoverProps>`
-  /*position:fixed;
-  top:0px;
-  left:0px;
-  height:100%;
-  width:100%;
-  */
-  
-  /*Fallback if gradeints don't work */
-  background: #9b59b6;
-  /*Linear gradient... */
-  background: 
-    radial-gradient(
-     at center, #3498db, #9b59b6
-    );
+  background: ${(props) => (props.hovering ? "-webkit-radial-gradient(" + props.x + "px " + props.y + "px" + ",circle," + props.gradient + ", " + props.background + " 100px)" : props.background)};
+  z-index: 2;
 `;
 
-export const RadientHover = (props: HoverProps) => {
+interface RadientHoverProps {
+  children?: React.ReactNode;
+  backgroundColor?: string;
+  gradientColor?: string;
+}
 
+export const RadientHover = (props: RadientHoverProps) => {
   const [inElemnt, setInElement] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [debug, setDebug] = useState("")
+  const [debug, setDebug] = useState("");
 
   let mouseEnter = () => {
-    setDebug("enter")
-  }
+    setInElement(true);
+    setDebug("enter");
+  };
 
   let mouseLeave = () => {
-    setDebug("leaves")
-  }
+    setInElement(false);
+    setDebug("leaves");
+  };
 
-  let mouseMove = (e:any) => {
-    setX(e.screenX);
-    setY(e.screenY)
-  }
+  let mouseMove = (e: any) => {
+    setX(e.clientX - e.target.offsetLeft);
+    setY(e.clientY - e.target.offsetTop);
+  };
   return (
-    <HoverContainer onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onMouseMove={mouseMove}>
-      
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt impedit unde commodi pariatur ullam nihil eveniet sequi non perferendis laudantium? Nihil tenetur ipsam voluptatum officiis
-        deserunt quis nobis, sed ex facilis, odit ad explicabo iste eum quaerat non eligendi corporis doloribus nostrum, id quibusdam quo aliquam tempora excepturi amet? Rerum.
-      </p>
-      <p>
-      Debug: {debug}
-      </p>
-      <p>
-        Mouse coordinate: { x } { y }
-      </p>
-
+    <HoverContainer gradient={props.gradientColor} background={props.backgroundColor} x={x} y={y} hovering={inElemnt} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave} onMouseMove={mouseMove}>
+      <div>{props.children}</div>
     </HoverContainer>
   );
 };
