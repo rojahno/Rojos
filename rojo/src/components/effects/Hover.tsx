@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 interface HoverProps {
@@ -24,7 +24,6 @@ export const RadientHover = (props: RadientHoverProps) => {
   const [inElemnt, setInElement] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
-  const [currentPos, setCurrentPos] = useState(null);
   // Create our reference
   const HoverElement = React.useRef<HTMLDivElement>(null);
 
@@ -36,10 +35,16 @@ export const RadientHover = (props: RadientHoverProps) => {
     setInElement(false);
   };
 
+  let mouseOver = () => {
+    if (!inElemnt){
+      setInElement(true)
+    }
+  }
+
   let mouseMove = (e: any) => {
-    if (HoverElement != null && inElemnt) {
+    if (HoverElement != null) {
       let rect = HoverElement.current?.getBoundingClientRect();
-      if (rect != undefined) {
+      if (rect !== undefined) {
         let x = e.clientX - rect.left; //x position within the element.
         let y = e.clientY - rect.top; //y position within the element.
         setX(x);
@@ -59,6 +64,7 @@ export const RadientHover = (props: RadientHoverProps) => {
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       onMouseMove={mouseMove}
+      onMouseOver={mouseOver}
     >
       <div>{props.children}</div>
     </HoverContainer>
