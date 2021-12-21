@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import { Card } from "../cards/Card";
 import { Accordion } from "../dataDisplay/Accordion";
@@ -11,6 +12,13 @@ const AccordionText = styled.p`
 `;
 
 export const CollapsibleExample = () => {
+  useEffect(() => {
+    //Prevents the auto scroll from the forced expanding accordion
+    const scrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+    scrollToTop();
+  });
   return (
     <ComponentExample title={"Collapsible example"}>
       <Card width={"75%"} title={"Normal Accordion"}>
@@ -40,9 +48,9 @@ export const CollapsibleExample = () => {
         </SimpleContainer>
       </Card>
 
-      <Card width={"75%"} title={"With animation"}>
+      <Card width={"75%"} title={"Accordion with animation"}>
         <SimpleContainer>
-          <Accordion title={"Title"} animation={true}>
+          <Accordion title={"The title of the accordion"} animation={true}>
             <AccordionText>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt repudiandae, eligendi dolorem nam quod illo reprehenderit vero, corrupti dolores excepturi quidem animi vitae
               accusantium repellendus eveniet? Fugiat, beatae architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum commodi rerum neque quaerat quasi reiciendis cumque officiis
@@ -50,7 +58,7 @@ export const CollapsibleExample = () => {
               reiciendis vel molestiae eos quae, rem necessitatibus. Aliquid iste maxime labore perspiciatis eum mollitia provident nihil dolorum iure.
             </AccordionText>
           </Accordion>
-          <Accordion title={"Title"} animation={true}>
+          <Accordion title={"The title of the accordion"} animation={true}>
             <AccordionText>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt repudiandae, eligendi dolorem nam quod illo reprehenderit vero, corrupti dolores excepturi quidem animi vitae
               accusantium repellendus eveniet? Fugiat, beatae architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum commodi rerum neque quaerat quasi reiciendis cumque officiis
@@ -58,7 +66,7 @@ export const CollapsibleExample = () => {
               reiciendis vel molestiae eos quae, rem necessitatibus. Aliquid iste maxime labore perspiciatis eum mollitia provident nihil dolorum iure.
             </AccordionText>
           </Accordion>
-          <Accordion title={"Title"} animation={true}>
+          <Accordion title={"The title of the accordion"} animation={true}>
             <AccordionText>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt repudiandae, eligendi dolorem nam quod illo reprehenderit vero, corrupti dolores excepturi quidem animi vitae
               accusantium repellendus eveniet? Fugiat, beatae architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum commodi rerum neque quaerat quasi reiciendis cumque officiis

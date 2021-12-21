@@ -4,11 +4,10 @@ import { Box } from "../layout/Box";
 import { ComponentExample } from "./ComponentExample";
 
 const HoverBox = styled.div`
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 `;
 
 const HoverText = styled.p`
