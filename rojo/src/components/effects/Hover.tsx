@@ -36,10 +36,10 @@ export const RadientHover = (props: RadientHoverProps) => {
   };
 
   let mouseOver = () => {
-    if (!inElemnt){
-      setInElement(true)
+    if (!inElemnt) {
+      setInElement(true);
     }
-  }
+  };
 
   let mouseMove = (e: any) => {
     if (HoverElement != null) {
