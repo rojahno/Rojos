@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Rojos/static/css/main.a163ad5f.chunk.css",
-    "main.js": "/Rojos/static/js/main.e065a336.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.e065a336.chunk.js.map",
+    "main.js": "/Rojos/static/js/main.8aea77db.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.8aea77db.chunk.js.map",
     "runtime-main.js": "/Rojos/static/js/runtime-main.d5407fde.js",
     "runtime-main.js.map": "/Rojos/static/js/runtime-main.d5407fde.js.map",
     "static/js/2.5616eddb.chunk.js": "/Rojos/static/js/2.5616eddb.chunk.js",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.d5407fde.js",
     "static/js/2.5616eddb.chunk.js",
     "static/css/main.a163ad5f.chunk.css",
-    "static/js/main.e065a336.chunk.js"
+    "static/js/main.8aea77db.chunk.js"
   ]
 }
