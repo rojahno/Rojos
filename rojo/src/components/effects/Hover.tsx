@@ -35,8 +35,14 @@ export const RadientHover = (props: RadientHoverProps) => {
     setInElement(false);
   };
 
+  let mouseOver = () => {
+    if (!inElemnt){
+      setInElement(true)
+    }
+  }
+
   let mouseMove = (e: any) => {
-    if (HoverElement != null && inElemnt) {
+    if (HoverElement != null) {
       let rect = HoverElement.current?.getBoundingClientRect();
       if (rect !== undefined) {
         let x = e.clientX - rect.left; //x position within the element.
@@ -58,6 +64,7 @@ export const RadientHover = (props: RadientHoverProps) => {
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       onMouseMove={mouseMove}
+      onMouseOver={mouseOver}
     >
       <div>{props.children}</div>
     </HoverContainer>
