@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Rojos/static/css/main.a163ad5f.chunk.css",
-    "main.js": "/Rojos/static/js/main.8aea77db.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.8aea77db.chunk.js.map",
+    "main.js": "/Rojos/static/js/main.d980dc0a.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.d980dc0a.chunk.js.map",
     "runtime-main.js": "/Rojos/static/js/runtime-main.d5407fde.js",
     "runtime-main.js.map": "/Rojos/static/js/runtime-main.d5407fde.js.map",
-    "static/js/2.5616eddb.chunk.js": "/Rojos/static/js/2.5616eddb.chunk.js",
-    "static/js/2.5616eddb.chunk.js.map": "/Rojos/static/js/2.5616eddb.chunk.js.map",
+    "static/js/2.095c7d7d.chunk.js": "/Rojos/static/js/2.095c7d7d.chunk.js",
+    "static/js/2.095c7d7d.chunk.js.map": "/Rojos/static/js/2.095c7d7d.chunk.js.map",
     "static/js/3.ed692305.chunk.js": "/Rojos/static/js/3.ed692305.chunk.js",
     "static/js/3.ed692305.chunk.js.map": "/Rojos/static/js/3.ed692305.chunk.js.map",
     "index.html": "/Rojos/index.html",
     "static/css/main.a163ad5f.chunk.css.map": "/Rojos/static/css/main.a163ad5f.chunk.css.map",
-    "static/js/2.5616eddb.chunk.js.LICENSE.txt": "/Rojos/static/js/2.5616eddb.chunk.js.LICENSE.txt",
+    "static/js/2.095c7d7d.chunk.js.LICENSE.txt": "/Rojos/static/js/2.095c7d7d.chunk.js.LICENSE.txt",
     "static/media/arrow.561a49b3.svg": "/Rojos/static/media/arrow.561a49b3.svg",
     "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
     "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d5407fde.js",
-    "static/js/2.5616eddb.chunk.js",
+    "static/js/2.095c7d7d.chunk.js",
     "static/css/main.a163ad5f.chunk.css",
-    "static/js/main.8aea77db.chunk.js"
+    "static/js/main.d980dc0a.chunk.js"
   ]
 }
