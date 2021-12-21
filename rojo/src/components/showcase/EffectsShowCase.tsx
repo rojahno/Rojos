@@ -13,8 +13,8 @@ export const EffectsShowCase = () => {
   return (
     <div>
       <ShowCase title={"Effects"}>
-        <Link to={"/effects"}>
-          <Card hoverable={true} title={"effects"}>
+        <Link to={"/hover"}>
+          <Card hoverable={true} title={"Hover"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>

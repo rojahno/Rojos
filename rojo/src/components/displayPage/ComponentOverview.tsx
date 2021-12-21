@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { CollapsibleShowCase } from "../showcase/CollapsibleShowCase";
+import { DataDisplayShowCase } from "../showcase/CollapsibleShowCase";
 import { EffectsShowCase } from "../showcase/EffectsShowCase";
 import { LayoutShowCase } from "../showcase/LayoutShowCase";
 import { LoaderShowCase } from "../showcase/LoaderShowCase";
-import { ModalShowCase } from "../showcase/ModalShowCase";
 
 const Header = styled.div`
   width: 100%;
@@ -18,8 +17,7 @@ export const ComponentOverview = () => {
       </Header>
       <LayoutShowCase />
       <LoaderShowCase />
-      <CollapsibleShowCase />
-      <ModalShowCase />
+      <DataDisplayShowCase />
       <EffectsShowCase/>
     </div>
   );
