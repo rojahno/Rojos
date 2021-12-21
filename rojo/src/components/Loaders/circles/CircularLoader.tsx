@@ -11,7 +11,7 @@ const StyledSpinner = styled.svg<SpinnerProps>`
   height: 50px;
 
   & .path {
-    stroke: ${(props) => (props.color ? props.color : "#3c3c3c")};
+    stroke: ${(props) => (props.color ? props.color : "#000000aa")};
     stroke-linecap: round;
     animation: ${Dash} 1.5s ease-in-out infinite;
   }

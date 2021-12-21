@@ -5,7 +5,7 @@ export const BtSpinner = styled.div`
   height: 50px;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid #222;
-  border-top: 2px solid #03a9f4;
+  border: 2px solid #000000ee;
+  border-top: 2px solid #00000070;
   animation: 1s ${Spin} linear infinite;
 `;

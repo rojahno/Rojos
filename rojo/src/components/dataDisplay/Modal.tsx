@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 interface ModalProps {
   visible?: boolean;
+  height?: string;
+  width?: string;
+  maxWidth?: string;
 }
-const Modal = styled.div<ModalProps>`
+const ModalBackground = styled.div<ModalProps>`
   display: ${(props) => (props.visible ? "flex" : "none")};
   justify-content: center;
   align-items: center;
@@ -17,39 +20,45 @@ const Modal = styled.div<ModalProps>`
   overflow: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014,
+    0 9px 28px 8px #0000000d;
 `;
 
-const ModalContainer = styled.div`
+const ModalContainer = styled.div<ModalProps>`
+  padding: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 0.7em;
+  color: black;
   background-color: #fefefe;
   border: 1px solid lightgray;
-  width: 520px;
-  height: 250px;
+
+  height: ${(props) => (props.height ? props.height : "50vh")};
+  width: ${(props) => (props.width ? props.width : "")};
+  max-width: ${(props) => (props.maxWidth ? props.maxWidth : "80vw")};
   overflow: auto;
 
   animation-name: grow-modal;
-  animation-duration: 0.2s;
+  animation-duration: 0.3s;
   animation-timing-function: ease;
+  animation-iteration-count: 1;
 
   @keyframes grow-modal {
     0% {
-      max-width: 520px;
+      max-width: 80vw;
       height: 50px;
     }
 
     100% {
-      max-width: 520px;
-      height: 250px;
+      height: 50vh;
     }
   }
 `;
 
 const ModalHeader = styled.h3`
+  color: black;
   width: 100%;
   height: 2em;
   padding: 0.5em;
@@ -71,7 +80,8 @@ const ModalFooter = styled.div`
 const ModalButton = styled.button`
   font-size: 1rem;
   margin: 0.5em;
-  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(111, 117, 133, 0.14);
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(111, 117, 133, 0.14);
   transition: transform ease-in 0.1s;
   border-style: none;
   padding: 0.3em 1.3em;
@@ -111,6 +121,7 @@ const CancelButton = styled(ModalButton)`
 `;
 
 const ModalContent = styled.div`
+  color: black;
   width: 100%;
   height: 100%;
   padding: 1em;
@@ -121,9 +132,12 @@ interface NotificationProps {
   onOk: () => any;
   onCancel: () => any;
   children?: any;
+  height?: string;
+  width?: string;
+  maxWidth?: string;
 }
 
-export const Notifications = (props: NotificationProps) => {
+export const Modal = (props: NotificationProps) => {
   const ref = useRef(null);
   const [isOpen, setIsOpen] = useState<boolean>();
 
@@ -135,10 +149,6 @@ export const Notifications = (props: NotificationProps) => {
     }
   };
 
-  const trydo = () => {
-    alert("clicked outside");
-  };
-
   useEffect(() => {
     const setVisible = () => {
       setIsOpen(props.visible);
@@ -148,8 +158,13 @@ export const Notifications = (props: NotificationProps) => {
   });
 
   return (
-    <Modal visible={isOpen}>
-      <ModalContainer ref={ref}>
+    <ModalBackground visible={isOpen}>
+      <ModalContainer
+        ref={ref}
+        height={props.height}
+        width={props.width}
+        maxWidth={props.maxWidth}
+      >
         <ModalHeader>Header</ModalHeader>
         <ModalContent>{props.children}</ModalContent>
         <ModalFooter>
@@ -157,34 +172,28 @@ export const Notifications = (props: NotificationProps) => {
           <OKButton onClick={props.onOk}>Ok</OKButton>
         </ModalFooter>
       </ModalContainer>
-    </Modal>
+    </ModalBackground>
   );
 };
 
 // Hook
-function useOnClickOutside(ref: any, handleOutsideClick: (event: Event) => any) {
-  useEffect(
-    () => {
-      const listener = (event: Event) => {
-        // Do nothing if clicking ref's element or descendent elements
-        if (!ref.current || ref.current.contains(event.target)) {
-          return;
-        }
-        handleOutsideClick(event);
-      };
-      document.addEventListener("mousedown", listener);
-      document.addEventListener("touchstart", listener);
-      return () => {
-        document.removeEventListener("mousedown", listener);
-        document.removeEventListener("touchstart", listener);
-      };
-    },
-    // Add ref and handler to effect dependencies
-    // It's worth noting that because passed in handler is a new ...
-    // ... function on every render that will cause this effect ...
-    // ... callback/cleanup to run every render. It's not a big deal ...
-    // ... but to optimize you can wrap handler in useCallback before ...
-    // ... passing it into this hook.
-    [ref, handleOutsideClick]
-  );
+function useOnClickOutside(
+  ref: any,
+  handleOutsideClick: (event: Event) => any
+) {
+  useEffect(() => {
+    const listener = (event: Event) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
+      }
+      handleOutsideClick(event);
+    };
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handleOutsideClick]);
 }

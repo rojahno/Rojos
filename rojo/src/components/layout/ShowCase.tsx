@@ -7,7 +7,7 @@ interface ShowCaseProps {
   children?: any;
 }
 const ShowCaseContainer = styled.div`
-  width: 40vw;
+  min-width: 40vw;
 
   border-radius: 0.5rem;
   display: flex;
@@ -29,7 +29,7 @@ export const ShowCase = (props: ShowCaseProps) => {
       <Divider />
       <ShowCaseContainer>
         <ShowCaseTitle> {props.title}</ShowCaseTitle>
-        <Grid>{props.children}</Grid>
+        <Grid >{props.children}</Grid>
       </ShowCaseContainer>
     </div>
   );

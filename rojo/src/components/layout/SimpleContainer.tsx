@@ -13,6 +13,8 @@ const Container = styled.div`
   justify-content: center;
   margin: 0px;
   padding: 0px;
+  width: 100%;
+  height: 100%;
 `;
 
 /**
@@ -22,7 +24,6 @@ const Container = styled.div`
  */
 export function SimpleContainer(props: SimpleContainerProps) {
   const Content = styled.div<ContentProps>`
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;

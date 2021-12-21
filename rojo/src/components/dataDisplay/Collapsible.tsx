@@ -10,9 +10,10 @@ const PanelHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
+  background-color: #dadada50;
   border-bottom: solid#D3D3D3;
   padding: 1em;
+
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -21,12 +22,13 @@ const PanelHeader = styled.div`
 
 const CollabsibleItem = styled.div`
   width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #fff;
-  margin-bottom: 1em;
-  border-radius: 5px;
+  background-color: #dadada80;
+  //margin-bottom: 1em;
+  //border-radius: 5px;
 `;
 
 interface ContentProps {
@@ -34,34 +36,15 @@ interface ContentProps {
 }
 
 export const Content = styled.div<ContentProps>`
-  display: border-box;
+  //visibility: ${(props) => (props.hide ? "hidden" : "border-box")};
   position: relative;
-  max-height: ${(props) => (props.hide ? "0px" : "100px")};
+  //max-height: ${(props) => (props.hide ? "0px" : "100px")};
   height: auto;
+  width: 100%;
   //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
   overflow: hidden;
+  padding: 0.3em;
   transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* animation-name: grow-modal;
-  animation-duration: 1s;
-  animation-timing-function: ease;
-  transition: all 0.5s ease;
-
-  @keyframes grow-modal {
-    0% {
-      width: 100%;
-      height: 0px;
-      overflow: hidden;
-    }
-
-    50% {
-      height: 184px;
-    }
-    100% {
-      height: auto;
-      overflow: initial;
-    }
-  }
-  */
 `;
 
 interface PanelProps {
@@ -71,6 +54,10 @@ interface PanelProps {
   header?: string; //Maybe change to any?
 }
 
+/**
+ * @param props
+ * @returns
+ */
 export const Panel = (props: PanelProps) => {
   const [isActive, setIsActive] = useState<boolean>(false);
 
@@ -96,8 +83,7 @@ export const Panel = (props: PanelProps) => {
         <Arrow rotate={!isActive} />
       </PanelHeader>
       <Content
-        hide={!isActive}
-        //hidden={!isActive}
+        hidden={!isActive}
       >
         {props.children}
       </Content>

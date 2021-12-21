@@ -40,6 +40,11 @@ export const LayoutShowCase = () => {
             <Image src={SVGDivider} />
           </Card>
         </Link>
+        <Link to={"/overlay"}>
+          <Card hoverable={true} title={"Overlay"}>
+            <Image src={SVGDivider} />
+          </Card>
+        </Link>
       </ShowCase>
     </div>
   );
