@@ -38,13 +38,13 @@ interface ContentProps {
 export const Content = styled.div<ContentProps>`
   //visibility: ${(props) => (props.hide ? "hidden" : "border-box")};
   position: relative;
-  //max-height: ${(props) => (props.hide ? "0px" : "100px")};
-  height: auto;
+  max-height: ${(props) => (props.hide ? "0px" : "200px")};
   width: 100%;
   //overflow: ${(props) => (props.hide ? "hidden" : "initial")};
-  overflow: hidden;
+  
   padding: 0.3em;
   transition: max-height 290ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 `;
 
 interface PanelProps {
@@ -82,11 +82,7 @@ export const Panel = (props: PanelProps) => {
         {props.header}
         <Arrow rotate={!isActive} />
       </PanelHeader>
-      <Content
-        hidden={!isActive}
-      >
-        {props.children}
-      </Content>
+      <Content hidden={!isActive}>{props.children}</Content>
     </CollabsibleItem>
   );
 };

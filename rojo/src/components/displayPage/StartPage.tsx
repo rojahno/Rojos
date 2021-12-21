@@ -17,7 +17,7 @@ import {
   CircleLoaderExample,
   IconLoaderExample,
 } from "../examples/LoaderExample";
-import { CollapsibleExample } from "../examples/CollapsibleExample";
+import { CollapsibleExample } from "../examples/AccordionExample";
 import { ModalExample } from "../examples/ModalExample";
 import { CardExample } from "../examples/CardExample";
 import { Content } from "../layout/Content";

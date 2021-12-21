@@ -14,7 +14,7 @@ export const DataDisplayShowCase = () => {
     <div>
       <ShowCase title={"Data Display"}>
         <Link to={"/accordion"}>
-          <Card hoverable={true} title={"Collapsible"}>
+          <Card hoverable={true} title={"Accordion"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>

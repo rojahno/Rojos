@@ -35,11 +35,19 @@ export const RadientHover = (props: RadientHoverProps) => {
     setInElement(false);
   };
 
-  let mouseOver = () => {
-    if (!inElemnt){
-      setInElement(true)
+  // Used to set the correct position if the users mouse starts in the hoverBox
+  let mouseOver = (e: any) => {
+    if (!inElemnt) {
+      setInElement(true);
+      let rect = HoverElement.current?.getBoundingClientRect();
+      if (rect !== undefined) {
+        let x = e.clientX - rect.left; //x position within the element.
+        let y = e.clientY - rect.top; //y position within the element.
+        setX(x);
+        setY(y);
+      }
     }
-  }
+  };
 
   let mouseMove = (e: any) => {
     if (HoverElement != null) {
