@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Card } from "../cards/Card";
 import { Accordion } from "../dataDisplay/Accordion";
+import { PageLayout } from "../displayPage/PageLayout";
 import { SimpleContainer } from "../layout/SimpleContainer";
 import { ComponentExample } from "./ComponentExample";
 
@@ -11,7 +11,10 @@ const AccordionText = styled.p`
   text-align: left;
 `;
 
-export const CollapsibleExample = () => {
+export const AccordionExample = () => {
+  const title = "Accordion";
+  const summary = "The accordion component ...";
+  const mainBackgroundColor = "#3d3d3dee";
   useEffect(() => {
     //Prevents the auto scroll from the forced expanding accordion
     const scrollToTop = () => {
@@ -20,8 +23,9 @@ export const CollapsibleExample = () => {
     scrollToTop();
   });
   return (
-    <ComponentExample title={"Collapsible example"}>
-      <Card width={"75%"} title={"Normal Accordion"}>
+    <PageLayout componentName={title} componentDescription={summary}>
+      <ComponentExample title={"Collapsible example"} backgroundColor={mainBackgroundColor}>
+        <h3>Normal accordion</h3>
         <SimpleContainer>
           <Accordion title={"The title of the accordion"}>
             <AccordionText>The content of the Accordion</AccordionText>
@@ -46,9 +50,10 @@ export const CollapsibleExample = () => {
             </AccordionText>
           </Accordion>
         </SimpleContainer>
-      </Card>
+      </ComponentExample>
 
-      <Card width={"75%"} title={"Accordion with animation"}>
+      <ComponentExample backgroundColor={mainBackgroundColor}>
+        <h3>With animation</h3>
         <SimpleContainer>
           <Accordion title={"The title of the accordion"} animation={true}>
             <AccordionText>
@@ -75,10 +80,11 @@ export const CollapsibleExample = () => {
             </AccordionText>
           </Accordion>
         </SimpleContainer>
-      </Card>
+      </ComponentExample>
 
-      <Card width={"75%"} title={"Forced Expanded"}>
+      <ComponentExample backgroundColor={mainBackgroundColor}>
         <SimpleContainer>
+          <h3>Forced Expanded</h3>
           <Accordion expanded={true} title={"This accordion is forced expanded"}>
             <AccordionText>
               The content of the Accordion Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos eveniet culpa consequatur ducimus eius natus cupiditate voluptates, perferendis, at sed
@@ -105,7 +111,7 @@ export const CollapsibleExample = () => {
             </AccordionText>
           </Accordion>
         </SimpleContainer>
-      </Card>
-    </ComponentExample>
+      </ComponentExample>
+    </PageLayout>
   );
 };

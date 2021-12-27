@@ -7,8 +7,8 @@ interface SpinnerProps {
 
 const StyledSpinner = styled.svg<SpinnerProps>`
   animation: ${Rotate} 2s linear infinite;
-  width: 50px;
-  height: 50px;
+  width: 5em;
+  height: 5em;
 
   & .path {
     stroke: ${(props) => (props.color ? props.color : "#000000aa")};

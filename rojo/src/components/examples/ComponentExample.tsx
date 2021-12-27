@@ -1,15 +1,22 @@
 import styled from "styled-components";
-import { Card } from "../cards/Card";
 
 interface ComponentExampleProps {
   children?: any;
   title?: string;
+  backgroundColor?: string;
+  padding?: string;
+  verticalCenter?: boolean;
 }
 
-const Container = styled.div`
+const Container = styled.div<ComponentExampleProps>`
   width: 100%;
   height: 100%;
   margin-top: 2em;
+  padding: ${(props) => (props.padding ? props.padding : "")};
+  border: solid #ffffffcc;
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
+  display: ${(props) => (props.verticalCenter ? "flex" : "")};
+  align-items: ${(props) => (props.verticalCenter ? "center" : "")};
 `;
 
 const ColumnContainer = styled.div`
@@ -17,13 +24,13 @@ const ColumnContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  height: 100%;
+  
 `;
 export const ComponentExample = (props: ComponentExampleProps) => {
   return (
-    <Container>
-      <Card title={props.title}>
-        <ColumnContainer>{props.children}</ColumnContainer>
-      </Card>
+    <Container backgroundColor={props.backgroundColor} padding={props.padding} verticalCenter={props.verticalCenter}>
+      <ColumnContainer>{props.children}</ColumnContainer>
     </Container>
   );
 };

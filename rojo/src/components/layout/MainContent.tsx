@@ -7,6 +7,7 @@ interface ContentProps {
   padding?: string;
   margin?: string;
   backgroundColor?: string;
+  color?: string;
 }
 
 export const MainContent = styled.div<ContentProps>`
@@ -15,8 +16,8 @@ export const MainContent = styled.div<ContentProps>`
 
   grid-template-columns: [sidebar] auto [content] 1fr;
 
-  background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "##fff"};
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
+  color: ${(props) => (props.color ? props.color : "")};
   display: flex;
   width: 100%;
   justify-content: ${(props) => (props.centerX ? "center" : "")};

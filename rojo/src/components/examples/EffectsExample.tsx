@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import { PageLayout } from "../displayPage/PageLayout";
 import { RadientHover } from "../effects/Hover";
-import { Box } from "../layout/Box";
 import { ComponentExample } from "./ComponentExample";
 
 const HoverBox = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 100%;
+  width: 100%;
 `;
 
 const HoverText = styled.p`
@@ -16,11 +18,11 @@ const HoverText = styled.p`
 `;
 
 export const HoverExample = () => {
+  const title = "Effects";
+  const summary = "The effects components ...";
   return (
-    <ComponentExample title={"Hover examples"}>
-      <h1>Radient hover</h1>
-
-      <Box>
+    <PageLayout componentName={title} componentDescription={summary}>
+      <ComponentExample title={"Hover examples"}>
         <RadientHover backgroundColor={"#434343"} gradientColor={"#4f14cc"}>
           <HoverBox>
             <HoverText>
@@ -37,7 +39,7 @@ export const HoverExample = () => {
             </HoverText>
           </HoverBox>
         </RadientHover>
-      </Box>
-    </ComponentExample>
+      </ComponentExample>
+    </PageLayout>
   );
 };

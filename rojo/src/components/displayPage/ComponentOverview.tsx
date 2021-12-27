@@ -4,21 +4,21 @@ import { EffectsShowCase } from "../showcase/EffectsShowCase";
 import { LayoutShowCase } from "../showcase/LayoutShowCase";
 import { LoaderShowCase } from "../showcase/LoaderShowCase";
 
-const Header = styled.div`
+const OverviewContainer = styled.div`
   width: 100%;
+  padding: 1em;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 export const ComponentOverview = () => {
   return (
-    <div>
-      <Header>
-        <h1>Components</h1>
-      </Header>
+    <OverviewContainer>
       <LayoutShowCase />
       <LoaderShowCase />
       <DataDisplayShowCase />
-      <EffectsShowCase/>
-    </div>
+      <EffectsShowCase />
+    </OverviewContainer>
   );
 };

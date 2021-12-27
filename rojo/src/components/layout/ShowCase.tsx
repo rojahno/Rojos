@@ -8,7 +8,7 @@ interface ShowCaseProps {
 }
 const ShowCaseContainer = styled.div`
   min-width: 40vw;
-
+  width: 2em;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -26,10 +26,10 @@ const ShowCaseTitle = styled.h1`
 export const ShowCase = (props: ShowCaseProps) => {
   return (
     <div>
-      <Divider />
+      <Divider/>
       <ShowCaseContainer>
         <ShowCaseTitle> {props.title}</ShowCaseTitle>
-        <Grid >{props.children}</Grid>
+        <Grid>{props.children}</Grid>
       </ShowCaseContainer>
     </div>
   );

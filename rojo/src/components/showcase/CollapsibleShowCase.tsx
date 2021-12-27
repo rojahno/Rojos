@@ -23,8 +23,8 @@ export const DataDisplayShowCase = () => {
             <Image src={SVGLayout} />
           </Card>
         </Link>
-        <Link to={"/notification"}>
-          <Card hoverable={true} title={"Notification"}>
+        <Link to={"/modal"}>
+          <Card hoverable={true} title={"Modal"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>

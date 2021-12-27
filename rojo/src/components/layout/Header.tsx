@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.header<HeaderProps>`
   grid-row-start: header;
-  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "#fff")};
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
+  color:${(props) => (props.color ? props.color : "")};
   display: flex;
   justify-content: ${(props) => (props.centered ? "center" : "")};
   align-items: ${(props) => (props.centered ? "center" : "")};
@@ -19,4 +20,5 @@ interface HeaderProps {
   padding?: string;
   fixed?: boolean;
   backgroundColor?: string;
+  color?: string;
 }

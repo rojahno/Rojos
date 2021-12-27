@@ -6,6 +6,7 @@ interface SideBarProps {
   centerX?: boolean;
   centerY?: boolean;
   width?: string;
+  backgroundColor?: string;
 }
 
 const SideBarContent = styled.div<SideBarProps>`
@@ -19,7 +20,7 @@ const SideBarContent = styled.div<SideBarProps>`
   flex-direction: column;
   justify-content: ${(props) => (props.centerY ? "center" : "stretch")};
   align-items: ${(props) => (props.centerX ? "center" : "flex-start")};
-  background-color: #57999e;
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
 `;
 
 // eslint-disable-next-line

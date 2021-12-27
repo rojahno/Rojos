@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Footer = styled.div<FooterProps>`
   grid-row-start: footer;
-  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "#fff")};
+  background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
   display: flex;
   justify-content: ${(props) => (props.centered ? "center" : "")};
   align-items: ${(props) => (props.centered ? "center" : "")};
   height: ${(props) => (props.height ? props.height : "100%")};
   padding: ${(props) => (props.padding ? props.padding : "0em")};
   margin: ${(props) => (props.padding ? props.padding : "0em")};
+  color: ${(props) => (props.color ? props.color : "")};
 `;
 
 interface FooterProps {
@@ -17,4 +18,5 @@ interface FooterProps {
   padding?: string;
   margin?: string;
   backgroundColor?: string;
+  color?: string;
 }

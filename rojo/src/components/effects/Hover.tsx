@@ -11,7 +11,10 @@ interface HoverProps {
 }
 
 const HoverContainer = styled.div<HoverProps>`
-  background: ${(props) => (props.hovering ? "-webkit-radial-gradient(" + props.x + "px " + props.y + "px" + ",circle," + props.gradient + ", " + props.background + " 7em)" : props.background)};
+  height: 100%;
+  background: ${(props) =>
+    // eslint-disable-next-line
+    props.hovering ? "-webkit-radial-gradient(" + props.x + "px " + props.y + "px" + ",circle," + props.gradient + ", " + props.background + " 7em)" : props.background};
 `;
 
 interface RadientHoverProps {

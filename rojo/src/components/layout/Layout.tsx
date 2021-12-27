@@ -11,7 +11,7 @@ interface LayoutProps {
 export const Layout = styled.section<LayoutProps>`
   //min-height: 100vh; //Is it this components responsibility to set the view height?
   background-color: ${(props) =>
-    props.backgroundColor ? props.backgroundColor : "#fff"};
+  props.backgroundColor ? props.backgroundColor : ""};
   width: ${(props) => (props.width ? props.width : "100%")};
   height: ${(props) => (props.height ? props.height : "100%")};
   display: grid;

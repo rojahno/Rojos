@@ -1,11 +1,15 @@
 import styled from "styled-components";
 import { Spin } from "../../animations";
-export const BtSpinner = styled.div`
-  width: 50px;
-  height: 50px;
+interface SpinnerProps {
+  primaryColor?: string;
+  secondaryColor?:string;
+}
+export const BtSpinner = styled.div<SpinnerProps>`
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   background-color: transparent;
-  border: 2px solid #000000ee;
-  border-top: 2px solid #00000070;
+  border: 0.3em solid ${(props) => (props.primaryColor ? props.primaryColor : "#000000aa")};
+  border-top: 0.3em solid ${(props) => (props.secondaryColor ? props.secondaryColor : "#000070")};
   animation: 1s ${Spin} linear infinite;
 `;
