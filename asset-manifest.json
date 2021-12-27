@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Rojos/static/css/main.a163ad5f.chunk.css",
-    "main.js": "/Rojos/static/js/main.af994b70.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.af994b70.chunk.js.map",
+    "main.css": "/Rojos/static/css/main.f4ef945e.chunk.css",
+    "main.js": "/Rojos/static/js/main.782c8412.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.782c8412.chunk.js.map",
     "runtime-main.js": "/Rojos/static/js/runtime-main.d5407fde.js",
     "runtime-main.js.map": "/Rojos/static/js/runtime-main.d5407fde.js.map",
-    "static/js/2.5616eddb.chunk.js": "/Rojos/static/js/2.5616eddb.chunk.js",
-    "static/js/2.5616eddb.chunk.js.map": "/Rojos/static/js/2.5616eddb.chunk.js.map",
+    "static/js/2.a959b9be.chunk.js": "/Rojos/static/js/2.a959b9be.chunk.js",
+    "static/js/2.a959b9be.chunk.js.map": "/Rojos/static/js/2.a959b9be.chunk.js.map",
     "static/js/3.ed692305.chunk.js": "/Rojos/static/js/3.ed692305.chunk.js",
     "static/js/3.ed692305.chunk.js.map": "/Rojos/static/js/3.ed692305.chunk.js.map",
     "index.html": "/Rojos/index.html",
-    "static/css/main.a163ad5f.chunk.css.map": "/Rojos/static/css/main.a163ad5f.chunk.css.map",
-    "static/js/2.5616eddb.chunk.js.LICENSE.txt": "/Rojos/static/js/2.5616eddb.chunk.js.LICENSE.txt",
+    "static/css/main.f4ef945e.chunk.css.map": "/Rojos/static/css/main.f4ef945e.chunk.css.map",
+    "static/js/2.a959b9be.chunk.js.LICENSE.txt": "/Rojos/static/js/2.a959b9be.chunk.js.LICENSE.txt",
     "static/media/arrow.561a49b3.svg": "/Rojos/static/media/arrow.561a49b3.svg",
     "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
     "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d5407fde.js",
-    "static/js/2.5616eddb.chunk.js",
-    "static/css/main.a163ad5f.chunk.css",
-    "static/js/main.af994b70.chunk.js"
+    "static/js/2.a959b9be.chunk.js",
+    "static/css/main.f4ef945e.chunk.css",
+    "static/js/main.782c8412.chunk.js"
   ]
 }
