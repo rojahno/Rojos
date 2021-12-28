@@ -7,6 +7,7 @@ const ExamplePageLayout = styled.div`
   height: 100%;
   padding: 1em;
   margin: 0px;
+  box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.1)
 `;
 
 interface PageLayoutProps {

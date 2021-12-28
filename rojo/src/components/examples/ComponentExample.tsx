@@ -13,10 +13,11 @@ const Container = styled.div<ComponentExampleProps>`
   height: 100%;
   margin-top: 2em;
   padding: ${(props) => (props.padding ? props.padding : "")};
-  border: solid #ffffffcc;
+  /* border: solid #ffffffcc; */
   background-color: ${(props) => (props.backgroundColor ? props.backgroundColor : "")};
   display: ${(props) => (props.verticalCenter ? "flex" : "")};
   align-items: ${(props) => (props.verticalCenter ? "center" : "")};
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4)
 `;
 
 const ColumnContainer = styled.div`

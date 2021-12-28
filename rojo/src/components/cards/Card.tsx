@@ -25,7 +25,7 @@ const CardContainer = styled.div<CardProps>`
   //overflow: auto;
   &:hover {
     box-shadow: ${(props) =>
-      props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.2)" : ""};
+      props.hoverable ? "0px 8px 16px 0px rgba(0, 0, 0, 0.3)" : ""};
   }
 `;
 
