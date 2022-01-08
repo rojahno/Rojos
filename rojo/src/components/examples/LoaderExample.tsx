@@ -11,12 +11,13 @@ import { ComponentExample } from "./ComponentExample";
 const LoaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: space-evenly;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  min-width: 8em;
-  min-height: 8em;
+  min-width: 5em;
+  min-height: 5em;
   padding: 1em;
+
 `;
 
 export const CircleLoaderExample = () => {
@@ -26,7 +27,7 @@ export const CircleLoaderExample = () => {
   return (
     <PageLayout componentDescription={summary} componentName={title}>
       <ComponentExample title={"Circle loaders example"} padding={"1em"} backgroundColor={mainBackgroundColor}>
-        <Grid>
+        <Grid columns={2} centerX={true} centerY={true}>
           <LoaderContainer>
             <CircularLoader color={"#3cefff"} />
           </LoaderContainer>
@@ -67,7 +68,7 @@ export const BarLoaderExample = () => {
   return (
     <PageLayout componentName={title} componentDescription={summary}>
       <ComponentExample title={"Loading bar example"} backgroundColor={mainBackgroundColor} padding={"1em"}>
-        <Grid>
+        <Grid >
           <LoaderContainer>
             <LoadingBar primaryColor={"#3cefff"} secondaryColor={"#3cefff80"} />
           </LoaderContainer>

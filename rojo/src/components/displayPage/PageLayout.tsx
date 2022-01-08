@@ -5,7 +5,7 @@ const ExamplePageLayout = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 1em;
+  padding: 1em 1em 2em 1em;
   margin: 0px;
   box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.1)
 `;

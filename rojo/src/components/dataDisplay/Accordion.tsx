@@ -55,6 +55,12 @@ const AccordionContent = styled.div<AccordionContentProps>`
   padding: ${(props) => (props.active ? "0em" : "0em")}; // Figure out how to add padding to height before setting it here
   transition: ${(props) => (props.animation ? "max-height 0.3s ease" : "")};
   padding-left: 1em;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  ::-webkit-scrollbar{
+    display: none; /* Chrome, Safari, Opera */
+  }
 `;
 
 interface PanelProps {
