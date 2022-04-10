@@ -43,6 +43,7 @@ export const SnakeGame = () => {
     const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
     const [snake, setSnake] = useState(initialSnake);
     const [apple, setApple] = useState<number[]>();
+    const [hasEaten, setHasEaten] = useState<boolean>(false);
     const [direction, setDirection] = useState<Direction>(Direction.Right);
     const [gameOver, setGameOver] = useState(false);
     const speed = 50;
@@ -70,16 +71,17 @@ export const SnakeGame = () => {
         if (ctx && canvasRef.current) {
             clearCanvas()
             draw();
-            let hasEaten = checkFruitCollision();
+            checkFruitCollision();
             let gameOver = hasCollided();
             container.current?.focus();
             if (gameOver) {
                 setGameOver(true);
                 setDelay(null)
             }
-            updateSnake(hasEaten);
+            updateSnake();
             if (hasEaten) {
                 spawnFruit()
+                setHasEaten(false);
             }
         }
     }
@@ -101,6 +103,7 @@ export const SnakeGame = () => {
         const head = body.pop()!;
         if (apple) {
             if (apple[0] === head[0] && apple[1] === head[1]) {
+                setHasEaten(true);
                 return true;
             }
         }
@@ -131,8 +134,10 @@ export const SnakeGame = () => {
     const spawnFruit = () => {
         let valid = false;
         while (!valid) {
-            let fruitX = Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * (rectSize);
+            let fruitX = Math.abs(Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * rectSize - rectSize);
             let fruitY = Math.abs(Math.round(Math.random() * (canvasRef.current!.height / rectSize)) * (rectSize) - rectSize);
+            console.log(fruitX, fruitY);
+            console.log("wh" + canvasRef.current?.width, canvasRef.current?.height);
             for (let block in snake) {
                 if (fruitX === snake[block][0] && fruitY === snake[block][1]) {
                     valid = false;
@@ -144,7 +149,7 @@ export const SnakeGame = () => {
         }
     }
 
-    const updateSnake = (hasEaten: boolean) => {
+    const updateSnake = () => {
         const head = snake[snake.length - 1];
         const newSnake = [...snake];
 
