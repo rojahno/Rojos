@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Card } from "../cards/Card";
-import { ShowCase } from "../layout/ShowCase";
+import { Card } from "../../components/cards/Card";
+import { ShowCase } from "../../components/layout/ShowCase";
 import SVGLayout from "../../images/layout.svg";
 import { Link } from "react-router-dom";
 
@@ -9,12 +9,12 @@ const Image = styled.img`
   width: 100%;
 `;
 
-export const MiscShowCase = () => {
+export const EffectsShowCase = () => {
   return (
     <div>
-      <ShowCase title={"Misc"}>
-        <Link to={"/misc/snake"}>
-          <Card hoverable={true} title={"Snake"}>
+      <ShowCase title={"Effects"}>
+        <Link to={"/hover"}>
+          <Card hoverable={true} title={"Hover"}>
             <Image src={SVGLayout} />
           </Card>
         </Link>

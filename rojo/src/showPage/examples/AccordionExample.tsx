@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Accordion } from "../dataDisplay/Accordion";
+import { Accordion } from "../../components/dataDisplay/Accordion";
 import { PageLayout } from "../displayPage/PageLayout";
-import { SimpleContainer } from "../layout/SimpleContainer";
+import { SimpleContainer } from "../../components/layout/SimpleContainer";
 import { ComponentExample } from "./ComponentExample";
 
 const AccordionText = styled.p`

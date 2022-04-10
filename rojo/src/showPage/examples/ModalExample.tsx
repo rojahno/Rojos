@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Modal } from "../dataDisplay/Modal";
+import { Modal } from "../../components/dataDisplay/Modal";
 import { PageLayout } from "../displayPage/PageLayout";
-import { StyledButton } from "../general/Buttons";
+import { StyledButton } from "../../components/general/Buttons";
 import { ComponentExample } from "./ComponentExample";
 
 export const ModalExample = () => {

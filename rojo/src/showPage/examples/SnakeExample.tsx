@@ -1,4 +1,4 @@
-import { SnakeGame } from "../misc/Snake";
+import { SnakeGame } from "../../components/misc/Snake";
 import { ComponentExample } from "./ComponentExample";
 
 export const SnakeExample = () => {

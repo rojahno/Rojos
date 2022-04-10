@@ -1,8 +1,8 @@
-import { Footer } from "../layout/Footer";
-import { Header } from "../layout/Header";
-import { Layout } from "../layout/Layout";
-import { MainContent } from "../layout/MainContent";
-import { NeonText } from "../neon/Neon";
+import { Footer } from "../../components/layout/Footer";
+import { Header } from "../../components/layout/Header";
+import { Layout } from "../../components/layout/Layout";
+import { MainContent } from "../../components/layout/MainContent";
+import { NeonText } from "../../components/neon/Neon";
 import { Route, HashRouter as Router, Switch, Link } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
 import { DividerExample, GridExample, LayoutExample, OverflowExample, OverlayExample } from "../examples/LayoutExample";
@@ -10,7 +10,7 @@ import { BarLoaderExample, CircleLoaderExample, IconLoaderExample } from "../exa
 import { AccordionExample } from "../examples/AccordionExample";
 import { ModalExample } from "../examples/ModalExample";
 import { CardExample } from "../examples/CardExample";
-import { MaxWidthContent } from "../layout/MaxWidthContent";
+import { MaxWidthContent } from "../../components/layout/MaxWidthContent";
 import { HoverExample } from "../examples/EffectsExample";
 import { SnakeExample } from "../examples/SnakeExample";
 

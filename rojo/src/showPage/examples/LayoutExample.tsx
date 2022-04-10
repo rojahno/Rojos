@@ -1,18 +1,18 @@
-import { Header } from "../layout/Header";
-import { MainContent } from "../layout/MainContent";
-import { Footer } from "../layout/Footer";
-import { Layout } from "../layout/Layout";
-import { Grid } from "../layout/Grid";
-import { Box } from "../layout/Box";
+import { Header } from "../../components/layout/Header";
+import { MainContent } from "../../components/layout/MainContent";
+import { Footer } from "../../components/layout/Footer";
+import { Layout } from "../../components/layout/Layout";
+import { Grid } from "../../components/layout/Grid";
+import { Box } from "../../components/layout/Box";
 import { ComponentExample } from "./ComponentExample";
-import { OverflowContainer } from "../layout/OverflowContainer";
+import { OverflowContainer } from "../../components/layout/OverflowContainer";
 import styled from "styled-components";
-import { Divider } from "../layout/Divider";
+import { Divider } from "../../components/layout/Divider";
 import { PageLayout } from "../displayPage/PageLayout";
-import { SideBar } from "../sideBar/SideBar";
-import { Content } from "../layout/Content";
-import { MacScrollContainer } from "../scrollbar/Scrollbars";
-import { SideOverlay } from "../overlay/SideOverlay";
+import { SideBar } from "../../components/sideBar/SideBar";
+import { Content } from "../../components/layout/Content";
+import { MacScrollContainer } from "../../components/scrollbar/Scrollbars";
+import { SideOverlay } from "../../components/overlay/SideOverlay";
 
 const VerticalText = styled.p`
   writing-mode: vertical-lr;

@@ -1,4 +1,4 @@
-import { Card } from "../cards/Card";
+import { Card } from "../../components/cards/Card";
 import { ComponentExample } from "./ComponentExample";
 
 export const CardExample = () => {

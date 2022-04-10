@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Card } from "../cards/Card";
-import { ShowCase } from "../layout/ShowCase";
+import { Card } from "../../components/cards/Card";
+import { ShowCase } from "../../components/layout/ShowCase";
 import SVGLayout from "../../images/layout.svg";
 import SVGGrid from "../../images/grid.svg";
 import SVGOverflow from "./../../images/overflow-text.svg";

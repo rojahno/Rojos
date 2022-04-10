@@ -1,4 +1,4 @@
-import { SideOverlay } from "../overlay/SideOverlay";
+import { SideOverlay } from "../../components/overlay/SideOverlay";
 import { ComponentExample } from "./ComponentExample";
 
 export const OverlayExample = () => {

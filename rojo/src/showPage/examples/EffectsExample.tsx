@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PageLayout } from "../displayPage/PageLayout";
-import { RadientHover } from "../effects/Hover";
+import { RadientHover } from "../../components/effects/Hover";
 import { ComponentExample } from "./ComponentExample";
 
 const HoverBox = styled.div`
