@@ -12,6 +12,7 @@ import { ModalExample } from "../examples/ModalExample";
 import { CardExample } from "../examples/CardExample";
 import { MaxWidthContent } from "../layout/MaxWidthContent";
 import { HoverExample } from "../examples/EffectsExample";
+import { SnakeExample } from "../examples/SnakeExample";
 
 export function StartPage() {
   return (
@@ -40,6 +41,7 @@ export function StartPage() {
               <Route path="/loaders/circle" exact component={CircleLoaderExample}></Route>
 
               <Route path="/card" exact component={CardExample}></Route>
+              <Route path="/misc/snake" exact component={SnakeExample}></Route>
             </Switch>
           </MaxWidthContent>
         </MainContent>
