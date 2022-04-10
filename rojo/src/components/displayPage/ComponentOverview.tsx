@@ -3,6 +3,7 @@ import { DataDisplayShowCase } from "../showcase/CollapsibleShowCase";
 import { EffectsShowCase } from "../showcase/EffectsShowCase";
 import { LayoutShowCase } from "../showcase/LayoutShowCase";
 import { LoaderShowCase } from "../showcase/LoaderShowCase";
+import { MiscShowCase } from "../showcase/MiscShowCase";
 
 const OverviewContainer = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ export const ComponentOverview = () => {
       <LoaderShowCase />
       <DataDisplayShowCase />
       <EffectsShowCase />
+      <MiscShowCase />
     </OverviewContainer>
   );
 };
