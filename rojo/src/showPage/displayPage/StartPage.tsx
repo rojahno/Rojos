@@ -13,6 +13,7 @@ import { CardExample } from "../examples/CardExample";
 import { MaxWidthContent } from "../../components/layout/MaxWidthContent";
 import { HoverExample } from "../examples/EffectsExample";
 import { SnakeExample } from "../examples/SnakeExample";
+import { DvdScreensaverExample } from "../examples/DvdScreensaverExample";
 
 export function StartPage() {
   return (
@@ -42,6 +43,7 @@ export function StartPage() {
 
               <Route path="/card" exact component={CardExample}></Route>
               <Route path="/misc/snake" exact component={SnakeExample}></Route>
+              <Route path="/misc/dvd" exact component={DvdScreensaverExample}></Route>
             </Switch>
           </MaxWidthContent>
         </MainContent>

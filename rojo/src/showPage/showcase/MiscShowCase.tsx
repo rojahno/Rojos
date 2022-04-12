@@ -18,6 +18,11 @@ export const MiscShowCase = () => {
             <Image src={SVGLayout} />
           </Card>
         </Link>
+        <Link to={"/misc/dvd"}>
+          <Card hoverable={true} title={"DVD"}>
+            <Image src={SVGLayout} />
+          </Card>
+        </Link>
       </ShowCase>
     </div>
   );

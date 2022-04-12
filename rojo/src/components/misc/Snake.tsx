@@ -59,7 +59,9 @@ export const SnakeGame = () => {
             container.current.focus();
             spawnFruit();
         }
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const resetGame = () => {
         setSnake(initialSnake);
         setGameOver(false);
@@ -67,6 +69,7 @@ export const SnakeGame = () => {
         spawnFruit();
         setDelay(speed)
     }
+
     const runGame = () => {
         if (ctx && canvasRef.current) {
             clearCanvas()
