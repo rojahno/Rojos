@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import useInterval from "../../hooks/UseInterval";
+import useWindowDimensions from "../../hooks/UseWindowDimensions";
 import hourglass from '../../images/hourglass.svg';
 
 const DvdCanvas = styled.canvas`
@@ -28,10 +29,11 @@ export const DvdScreensaver = () => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const container = useRef<HTMLDivElement | null>(null);
     const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
-    const speed = 20;
+    const speed = 7;
+    const { height, width } = useWindowDimensions();
 
     const [delay, setDelay] = useState<number | null>(speed);
-    const [position, setPosition] = useState<{ x: number, y: number }>({ x: 20, y: 30 });
+    const [position, setPosition] = useState<{ x: number, y: number }>({ x: 300, y: 300 });
     const [direction, setDirection] = useState<{ x: number, y: number }>({ x: 1, y: 1 });
     const [dimensions, setDimensions] = useState<{ width: number, height: number }>({ width: 0, height: 0 });
     const [colorNr, setColorNr] = useState<number>(0);
@@ -52,7 +54,7 @@ export const DvdScreensaver = () => {
     }, []);
 
     const run = () => {
-        let addition = 10;
+        let addition = 2;
         let new_x = (position.x) + (addition * direction.x);
         let new_y = (position.y) + (addition * direction.y);
         setPosition({ x: new_x, y: new_y });
@@ -65,16 +67,14 @@ export const DvdScreensaver = () => {
         if (ctx && canvasRef.current) {
             //Draws text in the canvas
             let text = "DVD";
-            ctx.font = "150pt Arial";
+            ctx.font = "120px Arial";
             ctx.fillStyle = color;
             ctx.fillText(text, position.x, position.y,);
             let width = ctx.measureText(text).width;
-            let height = 150;
+            let height = 120;
             if (dimensions.width !== width || dimensions.height !== height) {
                 setDimensions({ width, height });
             }
-            // ctx.drawImage(img, position.x, position.y, 400, 200);
-
         }
     }
 
@@ -154,7 +154,7 @@ export const DvdScreensaver = () => {
 
     return (
         <div ref={container} tabIndex={1} >
-            <DvdCanvas width={2000} height={1000} tabIndex={0} ref={canvasRef} />
+            <DvdCanvas width={width*1.5} height={height*1.5} tabIndex={0} ref={canvasRef} />
         </div>
     )
 
