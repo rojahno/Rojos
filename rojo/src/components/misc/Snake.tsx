@@ -45,6 +45,7 @@ export const SnakeGame = () => {
     const [apple, setApple] = useState<number[]>();
     const [hasEaten, setHasEaten] = useState<boolean>(false);
     const [direction, setDirection] = useState<Direction>(Direction.Right);
+    const directionRef = useRef<Direction>(Direction.Right);
     const [gameOver, setGameOver] = useState(false);
     const speed = 50;
     const [delay, setDelay] = useState<number | null>(speed);
@@ -66,6 +67,7 @@ export const SnakeGame = () => {
         setSnake(initialSnake);
         setGameOver(false);
         setDirection(Direction.Right);
+        directionRef.current = Direction.Right;
         spawnFruit();
         setDelay(speed)
     }
@@ -194,22 +196,26 @@ export const SnakeGame = () => {
     const changeDirection = (e: React.KeyboardEvent<HTMLDivElement>) => {
         switch (e.key) {
             case "ArrowLeft":
-                if (direction !== Direction.Right) {
+                if (directionRef.current !== Direction.Right) {
+                    directionRef.current = Direction.Left;
                     setDirection(Direction.Left)
                 }
                 break;
             case "ArrowUp":
-                if (direction !== Direction.Down) {
+                if (directionRef.current !== Direction.Down) {
+                    directionRef.current = Direction.Up;
                     setDirection(Direction.Up)
                 }
                 break;
             case "ArrowRight":
-                if (direction !== Direction.Left) {
+                if (directionRef.current !== Direction.Left) {
+                    directionRef.current = Direction.Right;
                     setDirection(Direction.Right)
                 }
                 break;
             case "ArrowDown":
-                if (direction !== Direction.Up) {
+                if (directionRef.current !== Direction.Up) {
+                    directionRef.current = Direction.Down;
                     setDirection(Direction.Down)
                 }
                 break;

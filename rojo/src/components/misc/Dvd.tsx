@@ -54,7 +54,7 @@ export const DvdScreensaver = () => {
     }, []);
 
     const run = () => {
-        let addition = 2;
+        let addition = 3.5;
         let new_x = (position.x) + (addition * direction.x);
         let new_y = (position.y) + (addition * direction.y);
         setPosition({ x: new_x, y: new_y });
@@ -154,7 +154,7 @@ export const DvdScreensaver = () => {
 
     return (
         <div ref={container} tabIndex={1} >
-            <DvdCanvas width={width*1.5} height={height*1.5} tabIndex={0} ref={canvasRef} />
+            <DvdCanvas width={width * 1.5} height={height * 1.5} tabIndex={0} ref={canvasRef} />
         </div>
     )
 
