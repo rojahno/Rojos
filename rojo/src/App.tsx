@@ -1,4 +1,4 @@
-import { StartPage } from "./components/displayPage/StartPage";
+import { StartPage } from "./showPage/displayPage/StartPage";
 import "./App.css";
 import { useEffect } from "react";
 

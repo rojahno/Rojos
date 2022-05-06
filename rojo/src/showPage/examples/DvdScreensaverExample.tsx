@@ -1,11 +1,11 @@
-import { SnakeGame } from "../misc/Snake";
+import { DvdScreensaver } from "../../components/misc/Dvd";
 import { ComponentExample } from "./ComponentExample";
 
-export const SnakeExample = () => {
+export const DvdScreensaverExample = () => {
 
     return (
         <ComponentExample title={"Example"}>
-            <SnakeGame />
+            <DvdScreensaver />
         </ComponentExample>
     );
 };

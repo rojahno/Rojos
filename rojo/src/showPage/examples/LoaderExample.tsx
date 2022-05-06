@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { PageLayout } from "../displayPage/PageLayout";
-import { Grid } from "../layout/Grid";
-import { LoadingBar } from "../Loaders/bar/LoadingBar";
-import { BtSpinner } from "../Loaders/circles/BtSpinner";
-import CircularLoader from "../Loaders/circles/CircularLoader";
-import { NbSpinner } from "../Loaders/circles/NbSpinner";
-import { HourGlass } from "../Loaders/Hourglass";
+import { Grid } from "../../components/layout/Grid";
+import { LoadingBar } from "../../components/Loaders/bar/LoadingBar";
+import { BtSpinner } from "../../components/Loaders/circles/BtSpinner";
+import CircularLoader from "../../components/Loaders/circles/CircularLoader";
+import { NbSpinner } from "../../components/Loaders/circles/NbSpinner";
+import { HourGlass } from "../../components/Loaders/Hourglass";
 import { ComponentExample } from "./ComponentExample";
 
 const LoaderContainer = styled.div`

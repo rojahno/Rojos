@@ -31,7 +31,6 @@ enum Direction {
 
 const GREEN = "#00ff00";
 const RED = "#ff0000";
-const BLACK = "#000000";
 
 const initialSnake = [[70, 49], [77, 49], [84, 49], [91, 49]]
 const rectSize = 7;
@@ -43,7 +42,9 @@ export const SnakeGame = () => {
     const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
     const [snake, setSnake] = useState(initialSnake);
     const [apple, setApple] = useState<number[]>();
+    const [hasEaten, setHasEaten] = useState<boolean>(false);
     const [direction, setDirection] = useState<Direction>(Direction.Right);
+    const directionRef = useRef<Direction>(Direction.Right);
     const [gameOver, setGameOver] = useState(false);
     const speed = 50;
     const [delay, setDelay] = useState<number | null>(speed);
@@ -58,28 +59,33 @@ export const SnakeGame = () => {
             container.current.focus();
             spawnFruit();
         }
-    }, [])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     const resetGame = () => {
         setSnake(initialSnake);
         setGameOver(false);
         setDirection(Direction.Right);
+        directionRef.current = Direction.Right;
         spawnFruit();
         setDelay(speed)
     }
+
     const runGame = () => {
         if (ctx && canvasRef.current) {
             clearCanvas()
             draw();
-            let hasEaten = checkFruitCollision();
+            checkFruitCollision();
             let gameOver = hasCollided();
             container.current?.focus();
             if (gameOver) {
                 setGameOver(true);
                 setDelay(null)
             }
-            updateSnake(hasEaten);
+            updateSnake();
             if (hasEaten) {
                 spawnFruit()
+                setHasEaten(false);
             }
         }
     }
@@ -101,6 +107,7 @@ export const SnakeGame = () => {
         const head = body.pop()!;
         if (apple) {
             if (apple[0] === head[0] && apple[1] === head[1]) {
+                setHasEaten(true);
                 return true;
             }
         }
@@ -131,8 +138,10 @@ export const SnakeGame = () => {
     const spawnFruit = () => {
         let valid = false;
         while (!valid) {
-            let fruitX = Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * (rectSize);
+            let fruitX = Math.abs(Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * rectSize - rectSize);
             let fruitY = Math.abs(Math.round(Math.random() * (canvasRef.current!.height / rectSize)) * (rectSize) - rectSize);
+            console.log(fruitX, fruitY);
+            console.log("wh" + canvasRef.current?.width, canvasRef.current?.height);
             for (let block in snake) {
                 if (fruitX === snake[block][0] && fruitY === snake[block][1]) {
                     valid = false;
@@ -144,7 +153,7 @@ export const SnakeGame = () => {
         }
     }
 
-    const updateSnake = (hasEaten: boolean) => {
+    const updateSnake = () => {
         const head = snake[snake.length - 1];
         const newSnake = [...snake];
 
@@ -186,22 +195,26 @@ export const SnakeGame = () => {
     const changeDirection = (e: React.KeyboardEvent<HTMLDivElement>) => {
         switch (e.key) {
             case "ArrowLeft":
-                if (direction !== Direction.Right) {
+                if (directionRef.current !== Direction.Right) {
+                    directionRef.current = Direction.Left;
                     setDirection(Direction.Left)
                 }
                 break;
             case "ArrowUp":
-                if (direction !== Direction.Down) {
+                if (directionRef.current !== Direction.Down) {
+                    directionRef.current = Direction.Up;
                     setDirection(Direction.Up)
                 }
                 break;
             case "ArrowRight":
-                if (direction !== Direction.Left) {
+                if (directionRef.current !== Direction.Left) {
+                    directionRef.current = Direction.Right;
                     setDirection(Direction.Right)
                 }
                 break;
             case "ArrowDown":
-                if (direction !== Direction.Up) {
+                if (directionRef.current !== Direction.Up) {
+                    directionRef.current = Direction.Down;
                     setDirection(Direction.Down)
                 }
                 break;

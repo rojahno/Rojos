@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Card } from "../cards/Card";
-import { ShowCase } from "../layout/ShowCase";
+import { Card } from "../../components/cards/Card";
+import { ShowCase } from "../../components/layout/ShowCase";
 import SVGLoadingBar from "../../images/loading-bar.svg";
 import SVGLoadingCircle from "../../images/loading-circle.svg";
 import SVGHourGlass from "./../../images/hourglass.svg";
