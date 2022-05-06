@@ -31,7 +31,6 @@ enum Direction {
 
 const GREEN = "#00ff00";
 const RED = "#ff0000";
-const BLACK = "#000000";
 
 const initialSnake = [[70, 49], [77, 49], [84, 49], [91, 49]]
 const rectSize = 7;
