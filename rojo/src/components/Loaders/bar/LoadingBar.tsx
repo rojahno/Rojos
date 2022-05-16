@@ -18,7 +18,7 @@ export const LoadingBar = styled.div<LoadingBarProps>`
   width: 150px;
   height: 20px;
   text-align: center;
-  color: aliceblue;
+  color: #fff;
 
   :after {
     content: "Loading...";
