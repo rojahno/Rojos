@@ -8,6 +8,7 @@ interface BulletPointListProps {
 const Ul = styled.ul`
   list-style-type: circle;
 `;
+// TODO: Remove?
 export const BulletPointList = (props:BulletPointListProps) => {
   return <Ul>{props.listItems?.map((item, index) => <li key={index}>{item}</li>)
       }</Ul>;
