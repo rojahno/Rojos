@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 interface SimpleContainerProps {
-  children: any;
+    children: any;
 }
 
 interface ContentProps {
-  padding?: string;
-  margin?: string;
+    padding?: string;
+    margin?: string;
 }
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
 `;
 
 /**
@@ -23,18 +23,18 @@ const Container = styled.div`
  * @returns
  */
 export function SimpleContainer(props: SimpleContainerProps) {
-  const Content = styled.div<ContentProps>`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: ${(props) => (props.margin ? props.margin : "0em")};
-    padding: ${(props) => (props.padding ? props.padding : "0em")};
-  `;
+    const Content = styled.div<ContentProps>`
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: ${(props) => (props.margin ? props.margin : "0em")};
+        padding: ${(props) => (props.padding ? props.padding : "0em")};
+    `;
 
-  return (
-    <Container>
-      <Content>{props.children}</Content>
-    </Container>
-  );
+    return (
+        <Container>
+            <Content>{props.children}</Content>
+        </Container>
+    );
 }

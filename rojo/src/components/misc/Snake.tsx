@@ -20,7 +20,7 @@ const GameText = styled.h1`
     transform: translate(-50%, -50%);
     font-size: 2em;
     text-align: center;
-    `;
+`;
 
 enum Direction {
     Up = 1,
@@ -32,11 +32,15 @@ enum Direction {
 const GREEN = "#00ff00";
 const RED = "#ff0000";
 
-const initialSnake = [[70, 49], [77, 49], [84, 49], [91, 49]]
+const initialSnake = [
+    [70, 49],
+    [77, 49],
+    [84, 49],
+    [91, 49],
+];
 const rectSize = 7;
 
 export const SnakeGame = () => {
-
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const container = useRef<HTMLDivElement | null>(null);
     const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>();
@@ -49,11 +53,11 @@ export const SnakeGame = () => {
     const speed = 50;
     const [delay, setDelay] = useState<number | null>(speed);
 
-    useInterval(() => runGame(), delay)
+    useInterval(() => runGame(), delay);
 
     useEffect(() => {
         if (canvasRef.current) {
-            setCtx(canvasRef.current.getContext("2d"))
+            setCtx(canvasRef.current.getContext("2d"));
         }
         if (container.current) {
             container.current.focus();
@@ -68,38 +72,38 @@ export const SnakeGame = () => {
         setDirection(Direction.Right);
         directionRef.current = Direction.Right;
         spawnFruit();
-        setDelay(speed)
-    }
+        setDelay(speed);
+    };
 
     const runGame = () => {
         if (ctx && canvasRef.current) {
-            clearCanvas()
+            clearCanvas();
             draw();
             checkFruitCollision();
             let gameOver = hasCollided();
             container.current?.focus();
             if (gameOver) {
                 setGameOver(true);
-                setDelay(null)
+                setDelay(null);
             }
             updateSnake();
             if (hasEaten) {
-                spawnFruit()
+                spawnFruit();
                 setHasEaten(false);
             }
         }
-    }
+    };
     const clearCanvas = () => {
         if (ctx && canvasRef.current) {
             ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
         }
-    }
+    };
     const hasCollided = () => {
         if (checkBodyCollision() || checkEdgeCollision()) {
             return true;
         }
         return false;
-    }
+    };
 
     // Checks if the snake and apple are colliding
     const checkFruitCollision = () => {
@@ -112,16 +116,21 @@ export const SnakeGame = () => {
             }
         }
         return false;
-    }
+    };
 
     const checkEdgeCollision = () => {
         const body = [...snake];
         const head = body.pop()!;
-        if (head[0] < 0 || head[0] > canvasRef.current!.width || head[1] < 0 || head[1] > canvasRef.current!.height - rectSize) {
+        if (
+            head[0] < 0 ||
+            head[0] > canvasRef.current!.width ||
+            head[1] < 0 ||
+            head[1] > canvasRef.current!.height - rectSize
+        ) {
             return true;
         }
         return false;
-    }
+    };
 
     const checkBodyCollision = () => {
         const body = [...snake];
@@ -133,13 +142,17 @@ export const SnakeGame = () => {
             }
         }
         return false;
-    }
+    };
 
     const spawnFruit = () => {
         let valid = false;
         while (!valid) {
-            let fruitX = Math.abs(Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * rectSize - rectSize);
-            let fruitY = Math.abs(Math.round(Math.random() * (canvasRef.current!.height / rectSize)) * (rectSize) - rectSize);
+            let fruitX = Math.abs(
+                Math.round(Math.random() * (canvasRef.current!.width / rectSize)) * rectSize - rectSize
+            );
+            let fruitY = Math.abs(
+                Math.round(Math.random() * (canvasRef.current!.height / rectSize)) * rectSize - rectSize
+            );
             console.log(fruitX, fruitY);
             console.log("wh" + canvasRef.current?.width, canvasRef.current?.height);
             for (let block in snake) {
@@ -151,29 +164,26 @@ export const SnakeGame = () => {
                 setApple([fruitX, fruitY]);
             }
         }
-    }
+    };
 
     const updateSnake = () => {
         const head = snake[snake.length - 1];
         const newSnake = [...snake];
 
         if (direction === Direction.Up) {
-            newSnake.push([head[0], head[1] - rectSize])
-        }
-        else if (direction === Direction.Down) {
-            newSnake.push([head[0], head[1] + rectSize])
-        }
-        else if (direction === Direction.Left) {
-            newSnake.push([head[0] - rectSize, head[1]])
-        }
-        else if (direction === Direction.Right) {
-            newSnake.push([head[0] + rectSize, head[1]])
+            newSnake.push([head[0], head[1] - rectSize]);
+        } else if (direction === Direction.Down) {
+            newSnake.push([head[0], head[1] + rectSize]);
+        } else if (direction === Direction.Left) {
+            newSnake.push([head[0] - rectSize, head[1]]);
+        } else if (direction === Direction.Right) {
+            newSnake.push([head[0] + rectSize, head[1]]);
         }
         if (!hasEaten) {
             newSnake.shift();
         }
         setSnake(newSnake);
-    }
+    };
 
     const draw = () => {
         if (ctx) {
@@ -189,33 +199,32 @@ export const SnakeGame = () => {
                 ctx.strokeRect(snake[block][0], snake[block][1], rectSize, rectSize);
             }
         }
-    }
-
+    };
 
     const changeDirection = (e: React.KeyboardEvent<HTMLDivElement>) => {
         switch (e.key) {
             case "ArrowLeft":
                 if (directionRef.current !== Direction.Right) {
                     directionRef.current = Direction.Left;
-                    setDirection(Direction.Left)
+                    setDirection(Direction.Left);
                 }
                 break;
             case "ArrowUp":
                 if (directionRef.current !== Direction.Down) {
                     directionRef.current = Direction.Up;
-                    setDirection(Direction.Up)
+                    setDirection(Direction.Up);
                 }
                 break;
             case "ArrowRight":
                 if (directionRef.current !== Direction.Left) {
                     directionRef.current = Direction.Right;
-                    setDirection(Direction.Right)
+                    setDirection(Direction.Right);
                 }
                 break;
             case "ArrowDown":
                 if (directionRef.current !== Direction.Up) {
                     directionRef.current = Direction.Down;
-                    setDirection(Direction.Down)
+                    setDirection(Direction.Down);
                 }
                 break;
             case "Escape":
@@ -227,17 +236,18 @@ export const SnakeGame = () => {
                 break;
             case " ":
                 if (gameOver) {
-                    resetGame()
+                    resetGame();
                 }
                 break;
         }
-    }
+    };
 
     return (
-        <div ref={container} tabIndex={1} onKeyDown={(e) => changeDirection(e)} >
-            <GameText hidden={!gameOver}>GAME OVER: <br /> Press space to restart</GameText>
+        <div ref={container} tabIndex={1} onKeyDown={(e) => changeDirection(e)}>
+            <GameText hidden={!gameOver}>
+                GAME OVER: <br /> Press space to restart
+            </GameText>
             <SnakeCanvas tabIndex={0} ref={canvasRef} />
         </div>
-    )
-
-}
+    );
+};
