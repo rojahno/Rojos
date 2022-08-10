@@ -28,13 +28,7 @@ export const Linechart = () => {
     }, [svgRef, width, height]);
 
     const drawChart = () => {
-        const svg = d3.select(svgRef.current);
-        svg.selectAll("*").remove();
-        // Main element
-        var chart = svg
-            .append("g")
-            .classed("graph", true)
-            .attr("transform", "translate(" + chartMarginLeft + "," + chartMarginTop + ")");
+        const chart = drawMainSvg();
         const ticks = data.length;
 
         // The scales for the x and y axis
@@ -55,6 +49,17 @@ export const Linechart = () => {
         drawGrid(chart, scaleX, scaleY, ticks);
         drawAxis(chart, scaleX, scaleY, ticks);
         drawLine(chart, scaleX, scaleY);
+    };
+
+    const drawMainSvg = () => {
+        const svg = d3.select(svgRef.current);
+        svg.selectAll("*").remove();
+        // Main element
+        var chart = svg
+            .append("g")
+            .classed("graph", true)
+            .attr("transform", "translate(" + chartMarginLeft + "," + chartMarginTop + ")");
+        return chart;
     };
 
     const drawAxis = (chart: any, scaleX: any, scaleY: any, ticks: any) => {
