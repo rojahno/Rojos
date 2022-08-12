@@ -14,41 +14,45 @@ import { MaxWidthContent } from "../../components/layout/MaxWidthContent";
 import { HoverExample } from "../examples/EffectsExample";
 import { SnakeExample } from "../examples/SnakeExample";
 import { DvdScreensaverExample } from "../examples/DvdScreensaverExample";
+import { BarchartExample } from "../examples/BarchartExample";
+import { LinechartExample } from "../examples/LinechartExample";
 
 export function StartPage() {
-  return (
-    <Layout height={"100vh"}>
-      <Router>
-        <Header centered={true} padding={'1em'}>
-          <Link to={"/"}>
-            <NeonText>Rojo</NeonText>
-          </Link>
-        </Header>
-        <MainContent centerX={true}>
-          <MaxWidthContent>
-            <Switch>
-              <Route path="/" exact component={ComponentOverview}></Route>
-              <Route path="/layout" exact component={LayoutExample}></Route>
-              <Route path="/grid" exact component={GridExample}></Route>
-              <Route path="/overflow" exact component={OverflowExample}></Route>
-              <Route path="/divider" exact component={DividerExample}></Route>
-              <Route path="/overlay" exact component={OverlayExample}></Route>
-              <Route path="/hover" exact component={HoverExample}></Route>
+    return (
+        <Layout height={"100vh"}>
+            <Router>
+                <Header centered={true} padding={"1em"}>
+                    <Link to={"/"}>
+                        <NeonText>Rojo</NeonText>
+                    </Link>
+                </Header>
+                <MainContent centerX={true}>
+                    <MaxWidthContent>
+                        <Switch>
+                            <Route path="/" exact component={ComponentOverview}></Route>
+                            <Route path="/layout" exact component={LayoutExample}></Route>
+                            <Route path="/grid" exact component={GridExample}></Route>
+                            <Route path="/overflow" exact component={OverflowExample}></Route>
+                            <Route path="/divider" exact component={DividerExample}></Route>
+                            <Route path="/overlay" exact component={OverlayExample}></Route>
+                            <Route path="/hover" exact component={HoverExample}></Route>
 
-              <Route path="/accordion" exact component={AccordionExample}></Route>
-              <Route path="/modal" exact component={ModalExample}></Route>
-              <Route path="/loaders/icon" exact component={IconLoaderExample}></Route>
-              <Route path="/loaders/bar" exact component={BarLoaderExample}></Route>
-              <Route path="/loaders/circle" exact component={CircleLoaderExample}></Route>
+                            <Route path="/accordion" exact component={AccordionExample}></Route>
+                            <Route path="/modal" exact component={ModalExample}></Route>
+                            <Route path="/loaders/icon" exact component={IconLoaderExample}></Route>
+                            <Route path="/loaders/bar" exact component={BarLoaderExample}></Route>
+                            <Route path="/loaders/circle" exact component={CircleLoaderExample}></Route>
 
-              <Route path="/card" exact component={CardExample}></Route>
-              <Route path="/misc/snake" exact component={SnakeExample}></Route>
-              <Route path="/misc/dvd" exact component={DvdScreensaverExample}></Route>
-            </Switch>
-          </MaxWidthContent>
-        </MainContent>
-        <Footer centered={true}>Dunde AS</Footer>
-      </Router>
-    </Layout>
-  );
+                            <Route path="/card" exact component={CardExample}></Route>
+                            <Route path="/misc/snake" exact component={SnakeExample}></Route>
+                            <Route path="/misc/dvd" exact component={DvdScreensaverExample}></Route>
+                            <Route path="/misc/bar" exact component={BarchartExample}></Route>
+                            <Route path="/misc/line" exact component={LinechartExample}></Route>
+                        </Switch>
+                    </MaxWidthContent>
+                </MainContent>
+                <Footer centered={true}>Dunde AS</Footer>
+            </Router>
+        </Layout>
+    );
 }
