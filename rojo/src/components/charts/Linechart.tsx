@@ -3,12 +3,6 @@ import { axisBottom, axisLeft } from "d3";
 import { useEffect, useRef } from "react";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
 
-interface Props {
-    data: any[];
-    xAxisLabels: string[];
-    yAxisLabels: string[];
-}
-
 const data = [2, 3, 62, 24, 64, 73, 96, 42, 32, 12, 43, 32, 12, 23, 72, 54, 43, 32];
 
 export const Linechart = () => {
