@@ -4,7 +4,7 @@ import { ComponentExample } from "./ComponentExample";
 
 export const CardExample = () => {
     return (
-        <PageLayout componentName="Cards" >
+        <PageLayout componentName="Cards">
             <ComponentExample title={"Card examples"}>
                 <Card width={"10em"} height={"7em"} title={"Card Title"}>
                     Card Content
