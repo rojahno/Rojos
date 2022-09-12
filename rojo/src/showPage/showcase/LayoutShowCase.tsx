@@ -39,6 +39,16 @@ export const LayoutShowCase = () => {
                         <Image src={SVGDivider} />
                     </Card>
                 </Link>
+                <Link to={"/hStack"}>
+                    <Card hoverable={true} title={"HStack"}>
+                        <Image src={SVGLayout} />
+                    </Card>
+                </Link>
+                <Link to={"/vStack"}>
+                    <Card hoverable={true} title={"VStack"}>
+                        <Image src={SVGLayout} />
+                    </Card>
+                </Link>
             </ShowCase>
         </div>
     );

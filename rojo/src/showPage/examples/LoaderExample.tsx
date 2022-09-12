@@ -48,10 +48,10 @@ export const CircleLoaderExample = () => {
 
 export const IconLoaderExample = () => {
     const title = "Icon loaders";
-    const summary = "The icon loader components ...";
+    // const summary = "The icon loader components ...";
     const primaryBlack = "#3c3c3c";
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
+        <PageLayout componentName={title}>
             <ComponentExample title={"Icon loaders example"} backgroundColor={""} padding={"1em"}>
                 <Grid>
                     <LoaderContainer>

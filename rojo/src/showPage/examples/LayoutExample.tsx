@@ -13,6 +13,8 @@ import { SideBar } from "../../components/sideBar/SideBar";
 import { Content } from "../../components/layout/Content";
 import { MacScrollContainer } from "../../components/scrollbar/Scrollbars";
 import { SideOverlay } from "../../components/overlay/SideOverlay";
+import { HStack } from "../../components/layout/HStack";
+import { VStack } from "../../components/layout/VStack";
 
 const VerticalText = styled.p`
     writing-mode: vertical-lr;
@@ -30,12 +32,9 @@ export function LayoutExample() {
     const mainBackgroundColor = "#333333";
     const secondaryBackgroundColor = "#3d3d3d";
     const mainFontColor = "#ffffffdd";
+    // const summary =  "The layout components consist of four different components: Layout, Header, MainContent and Footer. These components creates a responsive and easy-to-use layout for your webpage. "
     return (
-        <PageLayout
-            componentName={"Layout"}
-            componentDescription={
-                "The layout components consist of four different components: Layout, Header, MainContent and Footer. These components creates a responsive and easy-to-use layout for your webpage. "
-            }>
+        <PageLayout componentName={"Layout"}>
             <ComponentExample title={"Normal layout example"}>
                 <Layout width={"100%"} height={"100%"} backgroundColor={mainBackgroundColor}>
                     <Header centered={true} backgroundColor={mainBackgroundColor} color={mainFontColor} height={"7vh"}>
@@ -209,5 +208,38 @@ export const OverlayExample = () => {
                 <SideOverlay moveRight={true} buttonText={"Right overlay"} />
             </div>
         </ComponentExample>
+    );
+};
+
+export const HStackExample = () => {
+    return (
+        <PageLayout componentName="HStack">
+            <ComponentExample>
+                <HStack>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                </HStack>
+            </ComponentExample>
+        </PageLayout>
+    );
+};
+export const VStackExample = () => {
+    return (
+        <PageLayout componentName="VStack">
+            <ComponentExample>
+                <VStack>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                    <Box> Box</Box>
+                </VStack>
+            </ComponentExample>
+        </PageLayout>
     );
 };

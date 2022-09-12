@@ -23,6 +23,11 @@ export const MiscShowCase = () => {
                         <Image src={SVGLayout} />
                     </Card>
                 </Link>
+                <Link to={"/misc/hover"}>
+                    <Card hoverable={true} title={"Hover"}>
+                        <Image src={SVGLayout} />
+                    </Card>
+                </Link>
                 <Link to={"/misc/bar"}>
                     <Card hoverable={true} title={"Barchart"}>
                         <Image src={SVGLayout} />

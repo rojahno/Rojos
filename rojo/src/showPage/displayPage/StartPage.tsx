@@ -5,7 +5,15 @@ import { MainContent } from "../../components/layout/MainContent";
 import { NeonText } from "../../components/neon/Neon";
 import { Route, HashRouter as Router, Switch, Link } from "react-router-dom";
 import { ComponentOverview } from "./ComponentOverview";
-import { DividerExample, GridExample, LayoutExample, OverflowExample, OverlayExample } from "../examples/LayoutExample";
+import {
+    DividerExample,
+    GridExample,
+    HStackExample,
+    LayoutExample,
+    OverflowExample,
+    OverlayExample,
+    VStackExample,
+} from "../examples/LayoutExample";
 import { BarLoaderExample, CircleLoaderExample, IconLoaderExample } from "../examples/LoaderExample";
 import { AccordionExample } from "../examples/AccordionExample";
 import { ModalExample } from "../examples/ModalExample";
@@ -34,8 +42,11 @@ export function StartPage() {
                             <Route path="/grid" exact component={GridExample}></Route>
                             <Route path="/overflow" exact component={OverflowExample}></Route>
                             <Route path="/divider" exact component={DividerExample}></Route>
+                            <Route path="/hStack" exact component={HStackExample}></Route>
+                            <Route path="/vStack" exact component={VStackExample}></Route>
+
                             <Route path="/overlay" exact component={OverlayExample}></Route>
-                            <Route path="/hover" exact component={HoverExample}></Route>
+                            <Route path="/misc/hover" exact component={HoverExample}></Route>
 
                             <Route path="/accordion" exact component={AccordionExample}></Route>
                             <Route path="/modal" exact component={ModalExample}></Route>

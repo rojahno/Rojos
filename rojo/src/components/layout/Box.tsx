@@ -4,6 +4,7 @@ export const Box = styled.div`
     height: 5em;
     border-radius: 8px;
     border: 1px solid #e2e2e2;
+    min-width: 3em;
 
     display: flex;
     justify-content: center;

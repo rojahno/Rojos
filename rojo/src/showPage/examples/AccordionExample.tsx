@@ -13,7 +13,7 @@ const AccordionText = styled.p`
 
 export const AccordionExample = () => {
     const title = "Accordion";
-    const summary = "The accordion component ...";
+    // const summary = "The accordion component ...";
     const mainBackgroundColor = "#3d3d3dee";
     useEffect(() => {
         //Prevents the auto scroll from the forced expanding accordion
@@ -23,7 +23,7 @@ export const AccordionExample = () => {
         scrollToTop();
     });
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
+        <PageLayout componentName={title}>
             <ComponentExample title={"Collapsible example"} backgroundColor={mainBackgroundColor}>
                 <h3>Normal accordion</h3>
                 <SimpleContainer>

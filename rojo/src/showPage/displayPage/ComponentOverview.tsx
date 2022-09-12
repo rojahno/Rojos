@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { DataDisplayShowCase } from "../showcase/CollapsibleShowCase";
-import { EffectsShowCase } from "../showcase/EffectsShowCase";
 import { LayoutShowCase } from "../showcase/LayoutShowCase";
 import { LoaderShowCase } from "../showcase/LoaderShowCase";
 import { MiscShowCase } from "../showcase/MiscShowCase";
@@ -19,7 +18,6 @@ export const ComponentOverview = () => {
             <LayoutShowCase />
             <LoaderShowCase />
             <DataDisplayShowCase />
-            <EffectsShowCase />
             <MiscShowCase />
         </OverviewContainer>
     );

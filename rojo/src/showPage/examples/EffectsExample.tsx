@@ -19,9 +19,9 @@ const HoverText = styled.p`
 
 export const HoverExample = () => {
     const title = "Effects";
-    const summary = "The effects components ...";
+    // const summary = "The effects components ...";
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
+        <PageLayout componentName={title}>
             <ComponentExample title={"Hover examples"}>
                 <RadientHover backgroundColor={"#434343"} gradientColor={"#4f14cc"}>
                     <HoverBox>

@@ -1,5 +1,5 @@
 import * as d3 from "d3";
-import { axisBottom, axisLeft, transition } from "d3";
+import { axisBottom, axisLeft } from "d3";
 import { useEffect, useRef } from "react";
 import useWindowDimensions from "../../hooks/UseWindowDimensions";
 
@@ -20,7 +20,7 @@ export const Barchart = () => {
     const chartHeight = height * 0.4;
     const chartMarginLeft = 40;
     const chartMarginTop = 10;
-    const yTicks = 5;
+    // const yTicks = 5;
     const Xticks = data.length;
 
     useEffect(() => {
@@ -50,6 +50,7 @@ export const Barchart = () => {
         drawBars(chart, scaleX, scaleY);
         transitionBars(chart, scaleY);
         addTooltip();
+        // chart.select(".domain").remove();
     };
 
     const drawMainSvg = () => {
@@ -112,7 +113,7 @@ export const Barchart = () => {
                     })
                     .ticks(Xticks)
             )
-            .style("stroke-dasharray", "3,3");
+            .style("stroke-dasharray", "3 3");
         // Draw vertical grid lines
         chart
             .append("g")
@@ -123,11 +124,15 @@ export const Barchart = () => {
                 axisLeft(scaleY)
                     .tickSize(-chartWidth)
                     .tickFormat((domain, number) => {
+                        console.log(domain, number);
+
                         return "";
                     })
-                    .ticks(yTicks)
+                // .ticks(yTicks)
             )
-            .style("stroke-dasharray", "3,3");
+            .style("stroke-dasharray", "3 3");
+        // Remove the domain.
+        // chart.selectAll(".domain").remove();
     };
     // FIXME: Change type from any to scaleband.
     const drawBars = (
@@ -185,12 +190,14 @@ export const Barchart = () => {
     };
 
     const mouseover = (d: any) => {
-        d3.select(".tooltip").style("opacity", 1);
+        let tooltip = d3.select(".tooltip");
+        tooltip.style("opacity", 1);
+        tooltip.style("z-index", "2");
     };
     const mousemove = (d: MouseEvent, data: any) => {
         let tooltip = d3.select(".tooltip");
         tooltip
-            .html("The exact value of<br>this cell is: " + data.value)
+            .html("value of cell is: " + data.value)
             .style("left", d.x + 20 + "px")
             .style("z-index", "10")
             .style("top", d.y - 10 + "px");
@@ -198,6 +205,7 @@ export const Barchart = () => {
     const mouseleave = (d: any) => {
         let tooltip = d3.select(".tooltip");
         tooltip.style("opacity", 0);
+        tooltip.style("z-index", "-1");
     };
 
     return (

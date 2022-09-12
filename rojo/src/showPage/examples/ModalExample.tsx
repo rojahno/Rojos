@@ -6,7 +6,7 @@ import { ComponentExample } from "./ComponentExample";
 
 export const ModalExample = () => {
     const title = "Modal";
-    const summary = "The modal component ...";
+    // const summary = "The modal component ...";
     const [open, setOpen] = useState(false);
 
     const toggle = () => {
@@ -14,7 +14,7 @@ export const ModalExample = () => {
     };
 
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
+        <PageLayout componentName={title}>
             <ComponentExample title={"Example"} verticalCenter={true}>
                 <Modal onCancel={toggle} onOk={toggle} visible={open} width={"530px"}>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus dolores nesciunt, dolore
