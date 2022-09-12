@@ -78,11 +78,11 @@ export function LayoutExample() {
 
 export const GridExample = () => {
     const title = "Grid";
-    const summary = "The grid component enables a responsive way to build a grid.";
+    // const summary = "The grid component enables a responsive way to build a grid.";
     const mainBackgroundColor = "#3d3d3dee";
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
-            <ComponentExample title={"Grid Example"} backgroundColor={mainBackgroundColor} padding={"1em"}>
+        <PageLayout componentName={title}>
+            <ComponentExample title={"Grid Example"} padding={"1em"}>
                 <Grid centerY={true} centerX={true} columns={2}>
                     <Box>Grid Box</Box>
                     <Box>Grid Box</Box>
@@ -105,15 +105,11 @@ const Overflow = styled.div`
 `;
 export const OverflowExample = () => {
     const title = "Overflow";
-    const summary = "The overflow component enables an easy way to handle overflow on a webpage.";
+    // const summary = "The overflow component enables an easy way to handle overflow on a webpage.";
     const mainBackgroundColor = "#3d3d3dee";
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
-            <ComponentExample
-                title={"Overflow Example"}
-                padding={"1em"}
-                backgroundColor={mainBackgroundColor}
-                verticalCenter={true}>
+        <PageLayout componentName={title}>
+            <ComponentExample title={"Overflow Example"} padding={"1em"} verticalCenter={true}>
                 <OverflowContainer width={"50%"}>
                     <Overflow>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
@@ -142,7 +138,7 @@ export const OverflowExample = () => {
                 </OverflowContainer>
             </ComponentExample>
 
-            <ComponentExample padding={"1em"} backgroundColor={mainBackgroundColor} verticalCenter={true}>
+            <ComponentExample padding={"1em"} verticalCenter={true}>
                 <OverflowContainer width={"50%"}>
                     <Overflow>
                         <MacScrollContainer>
@@ -165,15 +161,11 @@ export const OverflowExample = () => {
 
 export const DividerExample = () => {
     const title = "Divider";
-    const summary = "The divider component enables creates a divider to seperate two parts.";
+    // const summary = "The divider component enables creates a divider to seperate two parts.";
     const mainBackgroundColor = "#3d3d3dee";
     return (
-        <PageLayout componentName={title} componentDescription={summary}>
-            <ComponentExample
-                title={"Divider Example"}
-                padding={"1em"}
-                backgroundColor={mainBackgroundColor}
-                verticalCenter={true}>
+        <PageLayout componentName={title}>
+            <ComponentExample title={"Divider Example"} padding={"1em"} verticalCenter={true}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis fugiat nostrum, quam, doloremque
                 quis nisi eligendi possimus facere autem consequatur dignissimos magnam repellendus. Laborum possimus
                 officia vero sunt maiores? Dignissimos?
