@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Rojos/static/css/main.f4ef945e.chunk.css",
-    "main.js": "/Rojos/static/js/main.e483366d.chunk.js",
-    "main.js.map": "/Rojos/static/js/main.e483366d.chunk.js.map",
-    "runtime-main.js": "/Rojos/static/js/runtime-main.f92d415c.js",
-    "runtime-main.js.map": "/Rojos/static/js/runtime-main.f92d415c.js.map",
-    "static/js/2.99e9980b.chunk.js": "/Rojos/static/js/2.99e9980b.chunk.js",
-    "static/js/2.99e9980b.chunk.js.map": "/Rojos/static/js/2.99e9980b.chunk.js.map",
-    "static/js/3.15855bf1.chunk.js": "/Rojos/static/js/3.15855bf1.chunk.js",
-    "static/js/3.15855bf1.chunk.js.map": "/Rojos/static/js/3.15855bf1.chunk.js.map",
+    "main.css": "/Rojos/static/css/main.93a59724.chunk.css",
+    "main.js": "/Rojos/static/js/main.1bf480de.chunk.js",
+    "main.js.map": "/Rojos/static/js/main.1bf480de.chunk.js.map",
+    "runtime-main.js": "/Rojos/static/js/runtime-main.a11d1b31.js",
+    "runtime-main.js.map": "/Rojos/static/js/runtime-main.a11d1b31.js.map",
+    "static/js/2.84e65a26.chunk.js": "/Rojos/static/js/2.84e65a26.chunk.js",
+    "static/js/2.84e65a26.chunk.js.map": "/Rojos/static/js/2.84e65a26.chunk.js.map",
+    "static/js/3.c8e5f3c8.chunk.js": "/Rojos/static/js/3.c8e5f3c8.chunk.js",
+    "static/js/3.c8e5f3c8.chunk.js.map": "/Rojos/static/js/3.c8e5f3c8.chunk.js.map",
     "index.html": "/Rojos/index.html",
-    "static/css/main.f4ef945e.chunk.css.map": "/Rojos/static/css/main.f4ef945e.chunk.css.map",
-    "static/js/2.99e9980b.chunk.js.LICENSE.txt": "/Rojos/static/js/2.99e9980b.chunk.js.LICENSE.txt",
+    "static/css/main.93a59724.chunk.css.map": "/Rojos/static/css/main.93a59724.chunk.css.map",
+    "static/js/2.84e65a26.chunk.js.LICENSE.txt": "/Rojos/static/js/2.84e65a26.chunk.js.LICENSE.txt",
     "static/media/arrow.561a49b3.svg": "/Rojos/static/media/arrow.561a49b3.svg",
     "static/media/divider.c173a4ce.svg": "/Rojos/static/media/divider.c173a4ce.svg",
     "static/media/grid.9081a125.svg": "/Rojos/static/media/grid.9081a125.svg",
@@ -22,9 +22,9 @@
     "static/media/overflow-text.cdde3e58.svg": "/Rojos/static/media/overflow-text.cdde3e58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f92d415c.js",
-    "static/js/2.99e9980b.chunk.js",
-    "static/css/main.f4ef945e.chunk.css",
-    "static/js/main.e483366d.chunk.js"
+    "static/js/runtime-main.a11d1b31.js",
+    "static/js/2.84e65a26.chunk.js",
+    "static/css/main.93a59724.chunk.css",
+    "static/js/main.1bf480de.chunk.js"
   ]
 }
