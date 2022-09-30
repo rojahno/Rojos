@@ -134,8 +134,6 @@ export const Barchart = () => {
                 axisLeft(scaleY)
                     .tickSize(-chartWidth)
                     .tickFormat((domain, number) => {
-                        console.log(domain, number);
-
                         return "";
                     })
                 // .ticks(yTicks)
