@@ -79,7 +79,7 @@ export function LayoutExample() {
 export const GridExample = () => {
     const title = "Grid";
     // const summary = "The grid component enables a responsive way to build a grid.";
-    const mainBackgroundColor = "#3d3d3dee";
+    // const mainBackgroundColor = "#3d3d3dee";
     return (
         <PageLayout componentName={title}>
             <ComponentExample title={"Grid Example"} padding={"1em"}>
@@ -106,7 +106,7 @@ const Overflow = styled.div`
 export const OverflowExample = () => {
     const title = "Overflow";
     // const summary = "The overflow component enables an easy way to handle overflow on a webpage.";
-    const mainBackgroundColor = "#3d3d3dee";
+    // const mainBackgroundColor = "#3d3d3dee";
     return (
         <PageLayout componentName={title}>
             <ComponentExample title={"Overflow Example"} padding={"1em"} verticalCenter={true}>
@@ -162,7 +162,7 @@ export const OverflowExample = () => {
 export const DividerExample = () => {
     const title = "Divider";
     // const summary = "The divider component enables creates a divider to seperate two parts.";
-    const mainBackgroundColor = "#3d3d3dee";
+    // const mainBackgroundColor = "#3d3d3dee";
     return (
         <PageLayout componentName={title}>
             <ComponentExample title={"Divider Example"} padding={"1em"} verticalCenter={true}>

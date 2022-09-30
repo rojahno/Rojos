@@ -37,6 +37,7 @@ export const Barchart = () => {
         if (svgRef.current) {
             drawChart();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [svgRef, width, height]);
 
     const drawChart = () => {
