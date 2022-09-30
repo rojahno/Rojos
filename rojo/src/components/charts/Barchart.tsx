@@ -14,8 +14,8 @@ const data = [
 export const Barchart = () => {
     const svgRef = useRef<SVGSVGElement>(null);
     const { width, height } = useWindowDimensions();
-    const svgWidth = width * 0.5;
-    const svgHeigth = height * 0.45 + 10;
+    let svgWidth = width * 0.5;
+    let svgHeigth = height * 0.45 + 10;
     const chartWidth = width * 0.45;
     const chartHeight = height * 0.4;
     const chartMarginLeft = 40;
@@ -23,7 +23,17 @@ export const Barchart = () => {
     // const yTicks = 5;
     const Xticks = data.length;
 
+    const setMaxChartDimension = () => {
+        if (width > 900) {
+            svgWidth = 900;
+        }
+        if (height > 500) {
+            svgHeigth = 500;
+        }
+    };
+
     useEffect(() => {
+        setMaxChartDimension();
         if (svgRef.current) {
             drawChart();
         }

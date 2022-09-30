@@ -8,14 +8,24 @@ const data = [2, 3, 62, 24, 64, 73, 96, 42, 32, 12, 43, 32, 12, 23, 72, 54, 43, 
 export const Linechart = () => {
     const svgRef = useRef<SVGSVGElement>(null);
     const { width, height } = useWindowDimensions();
-    const svgWidth = width * 0.5;
-    const svgHeigth = height * 0.45 + 10;
+    let svgWidth = width * 0.5;
+    let svgHeigth = height * 0.45 + 10;
     const chartWidth = width * 0.45;
     const chartHeight = height * 0.4;
     const chartMarginLeft = 40;
     const chartMarginTop = 10;
 
+    const setMaxChartDimension = () => {
+        if (width > 900) {
+            svgWidth = 900;
+        }
+        if (height > 500) {
+            svgHeigth = 500;
+        }
+    };
+
     useEffect(() => {
+        setMaxChartDimension();
         if (svgRef.current) {
             drawChart();
         }
